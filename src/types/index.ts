@@ -16,7 +16,6 @@ export interface Social {
   github: string;
   linkedin: string;
   twitter: string;
-  researchgate: string;
   googleScholar: string;
   orcid: string;
 }
