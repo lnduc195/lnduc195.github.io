@@ -179,7 +179,7 @@ export default async function PublicationPage({ params }: { params: Promise<{ sl
           
           <div className="flex items-center justify-between py-4 border-t border-b">
             <div>
-              <p className="text-gray-600">By <span className="font-medium">{blog.author}</span></p>
+              <p className="text-gray-600 font-medium">{blog.author}</p>
             </div>
             <div className="flex flex-wrap gap-2">
               {blog.topics && blog.topics.map((topic) => (
