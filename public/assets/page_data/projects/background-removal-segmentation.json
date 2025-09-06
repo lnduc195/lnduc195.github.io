@@ -6,7 +6,7 @@
     "title": "Real-time Human Segmentation & Background Manipulation System",
     "description": "A cutting-edge computer vision system for real-time human segmentation and background removal using deep learning, achieving broadcast-quality results with optimized performance for production video applications.",
     "main_image": {
-        "url": "https://cdn-front.freepik.com/images/ai/segmentation/real-time-background.webp?w=1920&h=1920&q=75",
+        "url": "public/assets/image/page/p01_01.jpg",
         "caption": "Real-time human segmentation demo showing precise edge detection and background replacement capabilities"
     },
     "problem_statement": [
