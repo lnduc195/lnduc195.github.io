@@ -1,6 +1,6 @@
 {
   "AI & Machine Learning": {
-    "Frameworks & Libraries": [
+    "Frameworks": [
       "PyTorch",
       "TensorFlow",
       "Keras",
@@ -14,50 +14,65 @@
       "LLaVA",
       "Qwen2.5"
     ],
-    "Learning Paradigms & Techniques": [
+    "Core Techniques": [
       "LoRA",
       "RLHF",
       "DPO",
-      "Knowledge Distillation",
+      "Distillation",
       "Self-supervised Learning",
       "Imitation Learning",
-      "Offline Reinforcement Learning",
+      "Offline RL",
       "Gradient Checkpointing",
-      "Flash Attention 2"
+      "Flash Attention 2",
+      "Continual Learning",
+      "Meta-Learning",
+      "Multi-modal Learning",
+      "Causal Inference"
     ],
-    "Natural Language Processing": [
-      "Named Entity Recognition (NER)",
+    "NLP": [
+      "NER",
       "Topic Classification",
-      "Sentiment Analysis (incl. Time-series)",
+      "Sentiment Analysis (Time-series)",
       "spaCy",
       "NLTK",
-      "WordNet"
+      "WordNet",
+      "Dialogue Systems",
+      "Prompt Engineering",
+      "Information Retrieval"
     ],
-    "Computer Vision": [
+    "Vision": [
       "OpenCV",
-      "Image Preprocessing",
+      "Image Processing",
+      "Computer Vision",
       "Object Detection",
-      "Visual Recognition"
+      "Semantic Segmentation",
+      "Generative Models (Diffusion, GANs)"
     ],
     "Explainability & Trustworthy AI": [
       "SHAP",
       "LIME",
-      "Concept Drift Detection",
-      "Model Calibration"
+      "Drift Detection",
+      "Calibration",
+      "Counterfactual Explanations",
+      "Fairness Audits",
+      "Bias Mitigation"
     ]
   },
   "Programming & Software Engineering": {
-    "Programming Languages": [
+    "Languages": [
       "Python (3.8+)",
       "JavaScript",
       "TypeScript",
       "SQL",
-      "Java"
+      "Java",
+      "C++"
     ],
-    "Software Engineering Practices": [
+    "Version Control & Config": [
       "Git (GitHub, GitLab)",
       "YAML-based Configuration",
-      "LaTeX (Documentation & Publications)"
+      "LaTeX",
+      "Pre-commit Hooks",
+      "Code Review Practices"
     ],
     "Web & Mobile Development": [
       "Flask",
@@ -65,125 +80,143 @@
       "React",
       "React Native",
       "Nginx",
-      "Command-line Interfaces (CLI)",
+      "CLI Tools",
       "OAuth2",
-      "JWT Authentication"
+      "JWT",
+      "gRPC"
     ]
   },
   "Data Engineering": {
-    "Data Ingestion & Workflow": [
+    "Collection & Ingestion": [
       "Kafka",
-      "Apache Airflow",
+      "Airflow",
       "Batch Processing",
-      "Stream Processing",
-      "Parallel Processing"
+      "Streaming",
+      "Parallel Processing",
+      "ETL/ELT Pipelines"
     ],
-    "Databases & Storage Systems": [
+    "Databases & Storage": [
       "PostgreSQL",
       "MongoDB",
-      "MongoDB (Crawler Integration)",
       "Redis",
       "Firebase",
-      "Vector Databases",
-      "AWS S3 Data Lakes",
-      "SQLAlchemy ORM",
-      "Google BigQuery"
+      "Vector DBs (Pinecone, Weaviate)",
+      "S3 Data Lakes",
+      "SQLAlchemy",
+      "BigQuery",
+      "Snowflake"
     ],
-    "Data Processing & Retrieval": [
+    "Processing & Querying": [
       "Semantic Chunking",
       "Multi-stage Reranking",
-      "json-repair"
+      "json-repair",
+      "Feature Engineering",
+      "Data Quality Validation"
     ]
   },
   "Deployment & MLOps": {
-    "Model Serving Frameworks": [
-      "NVIDIA Triton Inference Server",
+    "Model Serving": [
+      "Triton",
       "TorchServe",
-      "TensorFlow Serving",
-      "TensorFlow Lite"
+      "TF Serving",
+      "TensorFlow Lite",
+      "ONNX Runtime"
     ],
-    "Containerization & Orchestration": [
+    "Containers & Orchestration": [
       "Docker",
       "Kubernetes",
-      "Ansible"
+      "Ansible",
+      "Helm"
     ],
-    "Scaling & Performance Optimization": [
+    "Scaling & Performance": [
       "Load Balancing",
       "Speculative Decoding",
       "Paged Attention",
       "Tree Attention",
-      "Model Caching"
+      "Caching",
+      "Sharding",
+      "Latency Optimization"
     ],
-    "CI/CD Pipelines": [
+    "CI/CD": [
       "GitHub Actions",
       "GitLab Runner",
-      "Jenkins"
+      "Jenkins",
+      "ArgoCD"
     ],
     "Monitoring & Observability": [
       "Prometheus",
       "Grafana",
       "tqdm",
-      "GPU Utilization Tracking"
+      "GPU Usage",
+      "ELK Stack",
+      "Sentry"
     ],
-    "Experiment Tracking": [
+    "Experiment Management": [
       "MLflow",
-      "Weights & Biases (W&B)"
+      "W&B",
+      "DVC"
     ]
   },
   "Advanced Architectures": {
-    "Retrieval-Augmented Generation & Agents": {
-      "Retrieval & Indexing": [
+    "RAG & Agents": {
+      "Retrieval & Knowledge": [
         "Langchain",
         "LlamaIndex",
-        "Faiss"
+        "Faiss",
+        "ElasticSearch"
       ],
-      "Reasoning & Planning Methods": [
+      "Reasoning & Planning": [
         "ReAct",
         "Tree-of-Thought",
-        "Task Graphs"
+        "Task Graphs",
+        "Program-of-Thoughts"
       ],
-      "Agent Tool Integration": [
+      "Agent Tooling": [
         "Function Calling",
         "Toolformer",
-        "Plugin APIs"
+        "Plugin APIs",
+        "Multi-agent Systems"
       ],
-      "Memory Architectures": [
+      "Memory Systems": [
         "Episodic Memory",
         "Semantic Memory",
-        "Hierarchical Summarization"
+        "Hierarchical Summaries",
+        "Vector-based Memory"
       ]
     },
-    "Emerging & Frontier Techniques": [
+    "Emerging Techniques": [
       "Edge AI (Quantization, Pruning, Distillation, PyTorch Mobile)",
       "Split Computing",
       "Federated Learning",
-      "Neural Database Systems",
-      "Semantic Caching"
+      "Neural Databases",
+      "Semantic Caching",
+      "Neuro-symbolic AI",
+      "Graph Neural Networks"
     ]
   },
   "Distributed & Parallel Computing": {
     "Multithreaded Programming": {
-      "Java Concurrency": [
-        "Thread Class",
+      "Java": [
+        "Thread class",
         "Executor Framework",
-        "Synchronized Blocks",
+        "Synchronized blocks",
         "Concurrent Collections"
       ],
-      "Python Concurrency": [
+      "Python": [
         "threading",
-        "Global Interpreter Lock (GIL)",
+        "GIL",
         "asyncio",
         "multiprocessing"
       ],
-      "Synchronization & Communication": [
+      "Synchronization": [
         "Semaphore",
-        "Event Objects",
-        "Condition Variables",
-        "Message Queues"
+        "Event objects",
+        "Condition variables",
+        "Queue"
       ]
     },
-    "GPU & Multi-GPU Processing": {
-      "Frameworks & Libraries": [
+    "Multi-GPU Processing": {
+      "Frameworks": [
         "CUDA",
         "cuDNN",
         "cuBLAS",
@@ -192,13 +225,14 @@
         "SYCL",
         "OpenACC"
       ],
-      "Optimization Strategies": [
+      "Optimization": [
         "Memory Coalescing",
         "Kernel Fusion",
         "Occupancy Tuning",
-        "Asynchronous Execution"
+        "Asynchronous Execution",
+        "Mixed Precision Training"
       ],
-      "Architectural Concepts": [
+      "Architecture Concepts": [
         "SIMD/SIMT",
         "Warp Scheduling",
         "Thread Divergence",
@@ -208,54 +242,80 @@
       ]
     },
     "Distributed Systems": {
-      "System Architectures": [
-        "Client-Server (REST APIs)",
-        "Peer-to-Peer (Distributed Hash Tables)",
-        "Microservices (API Gateway, Event-driven Architecture)"
+      "Architecture Models": [
+        "Client-Server (REST API)",
+        "Peer-to-Peer (DHT)",
+        "Microservices (API Gateway, Event-driven)"
       ],
       "Frameworks": [
         "Ray",
-        "PyTorch Distributed"
+        "PyTorch Distributed",
+        "Horovod"
       ]
     },
-    "GPU Cluster Management": {
-      "Resource Scheduling": [
+    "GPU Clusters": {
+      "Resource Management": [
         "Slurm",
         "Kubernetes",
-        "Virtual GPU (vGPU)"
+        "vGPU"
       ],
-      "High-speed Networking": [
-        "NVLink"
+      "Networking": [
+        "NVLink",
+        "RDMA"
       ],
-      "Request Scheduling & Execution": [
-        "CLI Interfaces",
+      "Request Management": [
+        "CLI Tools",
         "API Clients",
-        "SDK Integrations",
+        "SDK Integration",
         "Priority Queues",
         "Elastic Scheduling"
       ]
     }
   },
   "Cloud & Infrastructure": {
-    "Cloud Platforms": [
+    "Platforms": [
       "AWS",
-      "DigitalOcean",
-      "Firebase"
+      "GCP",
+      "Azure",
+      "DigitalOcean"
     ],
-    "Compute & Storage Services": [
+    "Compute & Storage": [
       "EC2",
       "S3",
-      "HDFS"
+      "HDFS",
+      "Bigtable"
     ],
-    "Networking & Security": [
+    "Networking": [
       "VPCs",
-      "Load Balancers"
+      "Load Balancers",
+      "Service Mesh (Istio, Linkerd)"
     ],
-    "AI & API Services": [
-      "Google Vertex AI",
+    "ML & API Services": [
+      "Vertex AI",
+      "SageMaker",
       "OpenAI API",
-      "Hugging Face Hub",
+      "Hugging Face",
       "Crisp API"
+    ]
+  },
+  "Leadership & Communication": {
+    "Project Management": [
+      "Agile/Scrum",
+      "Kanban",
+      "Jira",
+      "ClickUp"
+    ],
+    "Team Leadership": [
+      "Mentorship",
+      "Technical Roadmapping",
+      "Code Reviews",
+      "Cross-functional Collaboration"
+    ],
+    "Communication": [
+      "Technical Writing",
+      "Conference Presentations",
+      "Stakeholder Alignment",
+      "Proposal Writing"
     ]
   }
 }
