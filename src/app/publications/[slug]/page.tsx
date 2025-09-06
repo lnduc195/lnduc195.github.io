@@ -84,12 +84,12 @@ export default async function PublicationPage({ params }: { params: Promise<{ sl
       {/* Header */}
       <article>
         <header className="mb-12">
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
             <div className="flex items-center space-x-4">
               <span className="text-gray-500">{blog.date}</span>
               <span className="text-blue-600">{blog.readingTime}</span>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-2 sm:gap-4">
               {blog.videoUrl && (
                 <Link
                   href={blog.videoUrl}
@@ -177,11 +177,11 @@ export default async function PublicationPage({ params }: { params: Promise<{ sl
             </div>
           )}
           
-          <div className="flex items-center justify-between py-4 border-t border-b">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 py-4 border-t border-b">
             <div>
               <p className="text-gray-600 font-medium">{blog.author}</p>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 sm:justify-end">
               {blog.topics && blog.topics.map((topic) => (
                 <span key={topic} className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">
                   {topic}
