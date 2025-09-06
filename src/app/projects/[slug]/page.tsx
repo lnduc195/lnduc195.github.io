@@ -15,6 +15,12 @@ export async function generateStaticParams() {
   }));
 }
 
+function formatText(text: string): string {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\n/g, '<br />');
+}
+
 function ContentSection({ title, content }: { title: string; content: ProjectContent[] }) {
   return (
     <div className="mb-12">
@@ -24,7 +30,7 @@ function ContentSection({ title, content }: { title: string; content: ProjectCon
           <div key={index}>
             {item.type === 'text' && (
               <div className="prose max-w-none">
-                <p className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: item.text || '' }} />
+                <p className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: formatText(item.text || '') }} />
               </div>
             )}
             {item.type === 'image' && (

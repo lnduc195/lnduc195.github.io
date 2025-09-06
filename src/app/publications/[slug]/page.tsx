@@ -15,6 +15,12 @@ export async function generateStaticParams() {
   }));
 }
 
+function formatText(text: string): string {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\n/g, '<br />');
+}
+
 function ContentSection({ content }: { content: ProjectContent[] }) {
   return (
     <div className="space-y-6">
@@ -24,7 +30,7 @@ function ContentSection({ content }: { content: ProjectContent[] }) {
             <div className="prose max-w-none">
               <div 
                 className="text-gray-700 leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: item.text?.replace(/\n/g, '<br />') || '' }} 
+                dangerouslySetInnerHTML={{ __html: formatText(item.text || '') }} 
               />
             </div>
           )}
