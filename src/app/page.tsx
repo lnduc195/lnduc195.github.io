@@ -1,5 +1,6 @@
 import { getAboutData } from '@/lib/data';
 import Link from 'next/link';
+import SocialIcons from '@/components/SocialIcons';
 
 export default async function Home() {
   const aboutData = await getAboutData();
@@ -112,20 +113,7 @@ export default async function Home() {
       {/* Social Links */}
       <div className="text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Connect With Me</h3>
-        <div className="flex justify-center space-x-6">
-          {Object.entries(aboutData.social).map(([platform, url]) => (
-            <Link
-              key={platform}
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-600 transition capitalize"
-            >
-              {platform === 'googleScholar' ? 'Google Scholar' : 
-               platform === 'researchgate' ? 'ResearchGate' : platform}
-            </Link>
-          ))}
-        </div>
+        <SocialIcons social={aboutData.social} />
       </div>
 
       {/* Footer Quote */}
