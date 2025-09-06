@@ -118,15 +118,12 @@
     "Model Serving": [
       "Triton",
       "TorchServe",
-      "TF Serving",
-      "TensorFlow Lite",
       "ONNX Runtime"
     ],
     "Containers & Orchestration": [
       "Docker",
       "Kubernetes",
-      "Ansible",
-      "Helm"
+      "Ansible"
     ],
     "Scaling & Performance": [
       "Load Balancing",
@@ -139,22 +136,17 @@
     ],
     "CI/CD": [
       "GitHub Actions",
-      "GitLab Runner",
-      "Jenkins",
-      "ArgoCD"
+      "GitLab Runner"
     ],
     "Monitoring & Observability": [
       "Prometheus",
       "Grafana",
       "tqdm",
-      "GPU Usage",
-      "ELK Stack",
-      "Sentry"
+      "GPU Usage"
     ],
     "Experiment Management": [
       "MLflow",
-      "W&B",
-      "DVC"
+      "W&B"
     ]
   },
   "Advanced Architectures": {
@@ -175,7 +167,8 @@
         "Function Calling",
         "Toolformer",
         "Plugin APIs",
-        "Multi-agent Systems"
+        "Multi-agent Systems",
+        "MCP"
       ],
       "Memory Systems": [
         "Episodic Memory",
