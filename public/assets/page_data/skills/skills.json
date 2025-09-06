@@ -64,7 +64,6 @@
       "JavaScript",
       "TypeScript",
       "SQL",
-      "Java",
       "C++"
     ],
     "Version Control & Config": [
@@ -189,12 +188,6 @@
   },
   "Distributed & Parallel Computing": {
     "Multithreaded Programming": {
-      "Java": [
-        "Thread class",
-        "Executor Framework",
-        "Synchronized blocks",
-        "Concurrent Collections"
-      ],
       "Python": [
         "threading",
         "GIL",
