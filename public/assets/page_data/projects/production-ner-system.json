@@ -1,0 +1,173 @@
+{
+    "id": "production-ner-system",
+    "author": ["Ngoc Duc"],
+    "highlight": true,
+    "date": "2024-05-25",
+    "title": "Production-Grade Named Entity Recognition for Customer Service",
+    "description": "An advanced speech-to-text and NER pipeline extracting critical business entities from customer service calls, enabling automated ticket routing, product issue tracking, and comprehensive service intelligence analytics.",
+    "main_image": {
+        "url": "https://cdn-front.freepik.com/images/ai/ner-system/entity-extraction.webp?w=1920&h=1920&q=75",
+        "caption": "NER system dashboard showing real-time entity extraction from customer service conversations"
+    },
+    "problem_statement": [
+        {
+            "type": "text",
+            "text": "**Manual Information Extraction**: Customer service representatives spend significant time manually extracting order numbers, product names, and issue descriptions from calls, leading to delays and inconsistent data capture."
+        },
+        {
+            "type": "text",
+            "text": "**Inconsistent Ticket Routing**: Lack of automated entity recognition results in tickets being misrouted to wrong departments, increasing resolution time and customer frustration."
+        },
+        {
+            "type": "text",
+            "text": "**Lost Business Intelligence**: Critical product feedback and issue patterns remain hidden in unstructured call transcripts, missing opportunities for product improvements and trend identification."
+        },
+        {
+            "type": "text",
+            "text": "**Language Complexity Challenges**: Vietnamese language nuances, technical product terminology, and speech-to-text errors create significant challenges for accurate entity extraction in production environments."
+        }
+    ],
+    "my_role": [
+        {
+            "type": "text",
+            "text": "**NLP Architecture Lead**: Designed end-to-end pipeline combining advanced speech recognition with BERT-based entity extraction, achieving 93% accuracy in Vietnamese product entity identification."
+        },
+        {
+            "type": "text",
+            "text": "**Domain Adaptation Specialist**: Developed custom entity types and training data for product domains, creating specialized models for order processing, technical support, and complaint handling."
+        },
+        {
+            "type": "text",
+            "text": "**Production Integration Engineer**: Built real-time processing system handling live customer calls with sub-second entity extraction and automatic CRM integration for seamless workflow automation."
+        },
+        {
+            "type": "text",
+            "text": "**Quality Assurance Architect**: Implemented confidence scoring, entity linking validation, and human-in-the-loop verification ensuring production-grade accuracy and reliability."
+        }
+    ],
+    "technical_solution": [
+        {
+            "type": "text",
+            "text": "**Advanced Speech-to-Text Pipeline**: Integrated state-of-the-art ASR models optimized for Vietnamese language with noise reduction, speaker diarization, and real-time transcription capabilities achieving 95% accuracy."
+        },
+        {
+            "type": "text",
+            "text": "**BERT-based Entity Extraction**: Fine-tuned Vietnamese BERT models for customer service domain with specialized entity types including ORDER_NUMBER, PRODUCT_NAME, ISSUE_DESCRIPTION, CUSTOMER_ID, and RESOLUTION_STATUS."
+        },
+        {
+            "type": "text",
+            "text": "**Two-Stage Processing Architecture**: Implemented cascaded NER approach with coarse-grained type classification followed by fine-grained entity extraction, improving accuracy through specialized model training."
+        },
+        {
+            "type": "image",
+            "url": "https://cdn-front.freepik.com/images/ai/ner-system/pipeline-architecture.webp?w=1920&h=1920&q=75",
+            "caption": "End-to-end NER pipeline showing speech processing, entity extraction, and business system integration"
+        },
+        {
+            "type": "text",
+            "text": "**Entity Linking and Validation**: Built comprehensive product database integration with fuzzy matching, confidence scoring, and automatic validation ensuring extracted entities match actual business records."
+        },
+        {
+            "type": "text",
+            "text": "**Context-Aware Disambiguation**: Developed sophisticated context analysis resolving entity ambiguity using conversation history, customer profile data, and business rules for accurate classification."
+        },
+        {
+            "type": "text",
+            "text": "**Real-time Processing Framework**: Implemented streaming data architecture processing live calls with immediate entity extraction, confidence assessment, and automated action triggering."
+        }
+    ],
+    "measurement_improvement": [
+        {
+            "type": "text",
+            "text": "**Entity Extraction Accuracy**: Achieved 93% F1-score for Vietnamese product entity recognition with 95% precision in order number detection and 91% accuracy in issue classification."
+        },
+        {
+            "type": "text",
+            "text": "**Processing Speed**: Delivered real-time entity extraction with average processing time of 150ms per call segment, enabling immediate insights and automated actions."
+        },
+        {
+            "type": "text",
+            "text": "**Ticket Routing Efficiency**: Improved automated routing accuracy by 75% through precise entity-based classification, reducing average resolution time by 40%."
+        },
+        {
+            "type": "text",
+            "text": "**Data Quality Enhancement**: Increased structured data capture from customer calls by 300%, providing comprehensive business intelligence for product and service improvements."
+        },
+        {
+            "type": "text",
+            "text": "**Operational Cost Reduction**: Reduced manual data entry time by 80% through automated entity extraction and CRM integration, saving 20+ hours weekly per agent."
+        }
+    ],
+    "implementation_integration": [
+        {
+            "type": "text",
+            "text": "**CRM System Integration**: Seamless integration with Salesforce, HubSpot, and custom CRM systems automatically populating tickets with extracted entities and customer context."
+        },
+        {
+            "type": "text",
+            "text": "**Call Center Platform Integration**: Direct integration with major call center platforms providing real-time entity overlay during live calls and automated post-call processing."
+        },
+        {
+            "type": "text",
+            "text": "**Business Intelligence Pipeline**: Built comprehensive analytics dashboard tracking product issues, customer sentiment, and service trends through extracted entity patterns."
+        },
+        {
+            "type": "text",
+            "text": "**Quality Assurance Framework**: Implemented human-in-the-loop validation system enabling continuous model improvement through expert feedback and edge case handling."
+        }
+    ],
+    "real_world_impact": [
+        {
+            "type": "text",
+            "text": "**Customer Service Transformation**: Enabled automatic extraction of critical information from 1000+ daily calls, improving service quality and reducing manual workload significantly."
+        },
+        {
+            "type": "text",
+            "text": "**Product Intelligence Enhancement**: Provided detailed insights into product issues and customer feedback patterns, directly informing product development priorities and quality improvements."
+        },
+        {
+            "type": "text",
+            "text": "**Operational Efficiency Gains**: Reduced average call processing time by 35% through automated information capture and intelligent ticket routing based on extracted entities."
+        },
+        {
+            "type": "text",
+            "text": "**Business Analytics Revolution**: Transformed unstructured call data into structured business intelligence, enabling data-driven decisions for service optimization and product strategy."
+        }
+    ],
+    "company_alignment": [
+        {
+            "type": "text",
+            "text": "**Customer Experience Excellence**: Directly supported organizational goals for superior customer service through intelligent automation and faster issue resolution."
+        },
+        {
+            "type": "text",
+            "text": "**Operational Efficiency Focus**: Aligned with strategic initiatives to optimize business processes through AI-powered automation and data-driven insights."
+        },
+        {
+            "type": "text",
+            "text": "**Innovation Leadership**: Demonstrated advanced expertise in production NLP systems, positioning company as leader in customer service AI technology."
+        }
+    ],
+    "technologies": [
+        "Python 3.8+",
+        "PyTorch",
+        "Transformers",
+        "Vietnamese BERT",
+        "Speech Recognition",
+        "Named Entity Recognition",
+        "Entity Linking",
+        "Real-time Processing",
+        "CRM Integration",
+        "Business Intelligence",
+        "Quality Assurance"
+    ],
+    "topics": [
+        "Named Entity Recognition",
+        "Speech Processing",
+        "Vietnamese NLP",
+        "Customer Service AI",
+        "Business Intelligence",
+        "Production NLP",
+        "Entity Extraction"
+    ]
+}
