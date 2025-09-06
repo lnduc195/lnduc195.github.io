@@ -95,6 +95,26 @@ export default async function PublicationPage({ params }: { params: Promise<{ sl
                   🔗 View Code
                 </Link>
               )}
+              {(blog as any).links?.github_repository && (
+                <Link
+                  href={(blog as any).links.github_repository}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition text-sm"
+                >
+                  🔗 GitHub
+                </Link>
+              )}
+              {(blog as any).links?.view_publication && (
+                <Link
+                  href={(blog as any).links.view_publication}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm"
+                >
+                  📄 View Paper
+                </Link>
+              )}
             </div>
           </div>
           
@@ -102,6 +122,27 @@ export default async function PublicationPage({ params }: { params: Promise<{ sl
           
           {blog.description && (
             <p className="text-xl text-gray-600 mb-8">{blog.description}</p>
+          )}
+          
+          {(blog as any).abstract && (
+            <div className="bg-gray-50 p-6 rounded-lg mb-8">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Abstract</h3>
+              <p className="text-gray-700 leading-relaxed">{(blog as any).abstract}</p>
+            </div>
+          )}
+          
+          {(blog as any).authors && (
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Authors</h3>
+              <p className="text-gray-700">{(blog as any).authors.join(', ')}</p>
+            </div>
+          )}
+          
+          {(blog as any).venue && (
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Publication Venue</h3>
+              <p className="text-gray-700">{(blog as any).venue} ({(blog as any).abbreviation})</p>
+            </div>
           )}
           
           {blog.main_image && (
@@ -137,7 +178,50 @@ export default async function PublicationPage({ params }: { params: Promise<{ sl
 
         {/* Content */}
         <div className="mb-12">
-          <ContentSection content={blog.content} />
+          {blog.content && <ContentSection content={blog.content} />}
+          
+          {/* Publication-specific sections */}
+          {(blog as any).problem && (
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Problem</h3>
+              <ContentSection content={(blog as any).problem} />
+            </div>
+          )}
+          
+          {(blog as any).gap && (
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Research Gap</h3>
+              <ContentSection content={(blog as any).gap} />
+            </div>
+          )}
+          
+          {(blog as any).solution && (
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Solution</h3>
+              <ContentSection content={(blog as any).solution} />
+            </div>
+          )}
+          
+          {(blog as any).results && (
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Results</h3>
+              <ContentSection content={(blog as any).results} />
+            </div>
+          )}
+          
+          {(blog as any).insights && (
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Key Insights</h3>
+              <ContentSection content={(blog as any).insights} />
+            </div>
+          )}
+          
+          {(blog as any).contributions && (
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Contributions</h3>
+              <ContentSection content={(blog as any).contributions} />
+            </div>
+          )}
         </div>
 
         {/* Technologies */}
