@@ -60,7 +60,7 @@
         },
         {
             "type": "image",
-            "url": "https://cdn-front.freepik.com/images/ai/segmentation/architecture-pipeline.webp?w=1920&h=1920&q=75",
+            "url": "public/assets/image/page/p01_01.jpg",
             "caption": "Processing pipeline showing multi-stage segmentation with edge refinement and post-processing optimization"
         },
         {
