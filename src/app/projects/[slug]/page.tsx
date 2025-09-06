@@ -21,6 +21,15 @@ function formatText(text: string): string {
     .replace(/\n/g, '<br />');
 }
 
+function processImageUrl(url: string): string {
+  // Convert relative paths starting with "public/" to web-accessible paths
+  if (url.startsWith('public/')) {
+    return '/' + url.substring(7); // Remove "public/" and add leading "/"
+  }
+  // Return absolute URLs and already processed relative paths as-is
+  return url;
+}
+
 function ContentSection({ title, content }: { title: string; content: ProjectContent[] }) {
   return (
     <div className="mb-12">
@@ -36,7 +45,7 @@ function ContentSection({ title, content }: { title: string; content: ProjectCon
             {item.type === 'image' && (
               <div className="my-8">
                 <img
-                  src={item.url}
+                  src={processImageUrl(item.url || '')}
                   alt={item.caption || ''}
                   className="w-full rounded-lg shadow-md"
                 />
@@ -89,7 +98,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         
         <div className="aspect-video relative overflow-hidden rounded-lg mb-8">
           <img
-            src={project.main_image.url}
+            src={processImageUrl(project.main_image.url)}
             alt={project.title}
             className="w-full h-full object-cover"
           />

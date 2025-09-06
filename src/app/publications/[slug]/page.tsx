@@ -21,6 +21,15 @@ function formatText(text: string): string {
     .replace(/\n/g, '<br />');
 }
 
+function processImageUrl(url: string): string {
+  // Convert relative paths starting with "public/" to web-accessible paths
+  if (url.startsWith('public/')) {
+    return '/' + url.substring(7); // Remove "public/" and add leading "/"
+  }
+  // Return absolute URLs and already processed relative paths as-is
+  return url;
+}
+
 function ContentSection({ content }: { content: ProjectContent[] }) {
   return (
     <div className="space-y-6">
@@ -37,7 +46,7 @@ function ContentSection({ content }: { content: ProjectContent[] }) {
           {item.type === 'image' && (
             <div className="my-8">
               <img
-                src={item.url}
+                src={processImageUrl(item.url || '')}
                 alt={item.caption || ''}
                 className="w-full rounded-lg shadow-md"
               />
@@ -155,7 +164,7 @@ export default async function PublicationPage({ params }: { params: Promise<{ sl
             <div className="mb-8">
               <div className="aspect-video relative overflow-hidden rounded-lg mb-4">
                 <img
-                  src={blog.main_image.url}
+                  src={processImageUrl(blog.main_image.url)}
                   alt={blog.title}
                   className="w-full h-full object-cover"
                 />
@@ -252,7 +261,7 @@ export default async function PublicationPage({ params }: { params: Promise<{ sl
               {blog.images.map((image, index) => (
                 <div key={index}>
                   <img
-                    src={image.url}
+                    src={processImageUrl(image.url)}
                     alt={image.caption}
                     className="w-full rounded-lg shadow-md"
                   />
