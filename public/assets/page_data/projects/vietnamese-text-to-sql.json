@@ -2,7 +2,7 @@
     "id": "vietnamese-text-to-sql",
     "author": ["Ngoc Duc"],
     "highlight": true,
-    "date": "2024-03-08",
+    "date": "2024-03-06",
     "title": "Production-Grade Vietnamese Text-to-SQL Intelligence Platform",
     "description": "Enterprise-grade Vietnamese text-to-SQL platform with intelligent chatbot interface, auto-visualization, and advanced security - achieving 79.4% accuracy while democratizing data access for 500+ users across PostgreSQL and ClickHouse environments.",
     "main_image": {
