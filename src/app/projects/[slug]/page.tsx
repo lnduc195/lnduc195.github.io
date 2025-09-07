@@ -28,45 +28,38 @@ function processImageUrl(url: string): string {
   return url;
 }
 
-function getLevelStyles(level: string, depth: number = 0): { containerClass: string; headerClass: string } {
-  // Normalize level format detection
+function getLevelStyles(level: string): { containerClass: string; headerClass: string } {
+  // Normalize level format detection - focus only on the pattern, not depth
   const cleanLevel = level.trim().toUpperCase();
   const isTopLevel = /^[A-Z]\./.test(cleanLevel);
   const isRomanNumeral = /^(I{1,3}V?X?|IV|V|VI|VII|VIII|IX|X)\./.test(cleanLevel);
   const isNumeric = /^\d+\./.test(cleanLevel);
   
-  // Determine hierarchy based on pattern and depth
-  let hierarchyLevel = depth;
-  if (isTopLevel) hierarchyLevel = 0;
-  else if (isRomanNumeral) hierarchyLevel = 1;
-  else if (isNumeric) hierarchyLevel = 2;
-  else hierarchyLevel = Math.max(depth, 2);
-  
-  switch (hierarchyLevel) {
-    case 0:
-      // Top level (A, B, C, etc.)
-      return {
-        containerClass: "mb-16 border-l-4 border-blue-500 pl-6 bg-gradient-to-r from-blue-50 to-transparent py-4",
-        headerClass: "text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3"
-      };
-    case 1:
-      // Second level (I, II, III, etc.)
-      return {
-        containerClass: "mb-12 border-l-2 border-blue-400 pl-6 ml-4 bg-gradient-to-r from-blue-50 to-transparent py-3",
-        headerClass: "text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-3"
-      };
-    case 2:
-      // Third level (1, 2, 3, etc.)
-      return {
-        containerClass: "mb-10 border-l-2 border-blue-200 pl-6 ml-8 bg-gradient-to-r from-gray-50 to-transparent py-2",
-        headerClass: "text-xl font-medium text-gray-700 mb-4 flex items-center gap-3"
-      };
-    default:
-      // Fourth level and deeper
-      return {
-        containerClass: "mb-8 border-l border-gray-200 pl-4 ml-12 py-2",
-        headerClass: "text-lg font-medium text-gray-600 mb-3 flex items-center gap-2"
-      };
+  // Determine hierarchy based purely on pattern (same pattern = same styling)
+  if (isTopLevel) {
+    // Top level (A, B, C, etc.) - always the same styling
+    return {
+      containerClass: "mb-16 border-l-4 border-blue-500 pl-6 bg-gradient-to-r from-blue-50 to-transparent py-4",
+      headerClass: "text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3"
+    };
+  } else if (isRomanNumeral) {
+    // Roman numeral level (I, II, III, etc.) - always the same styling
+    return {
+      containerClass: "mb-12 border-l-2 border-blue-400 pl-6 ml-4 bg-gradient-to-r from-blue-50 to-transparent py-3",
+      headerClass: "text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-3"
+    };
+  } else if (isNumeric) {
+    // Numeric level (1, 2, 3, etc.) - always the same styling
+    return {
+      containerClass: "mb-10 border-l-2 border-blue-200 pl-6 ml-8 bg-gradient-to-r from-gray-50 to-transparent py-2",
+      headerClass: "text-xl font-medium text-gray-700 mb-4 flex items-center gap-3"
+    };
+  } else {
+    // Unknown/other patterns - default styling
+    return {
+      containerClass: "mb-8 border-l border-gray-200 pl-4 ml-12 py-2",
+      headerClass: "text-lg font-medium text-gray-600 mb-3 flex items-center gap-2"
+    };
   }
 }
 
@@ -76,29 +69,38 @@ function renderTable(content: ProjectContent): JSX.Element {
   }
 
   return (
-    <div className="overflow-x-auto my-8">
-      <table className="min-w-full divide-y divide-gray-200 border border-gray-300 rounded-lg">
-        <thead className="bg-gray-50">
-          <tr>
-            {content.headers.map((header, index) => (
-              <th key={index} className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200 last:border-r-0">
-                {header}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody className="bg-white divide-y divide-gray-200">
-          {content.rows.map((row, rowIndex) => (
-            <tr key={rowIndex} className="hover:bg-gray-50">
-              {row.map((cell, cellIndex) => (
-                <td key={cellIndex} className="px-4 py-3 text-sm text-gray-900 border-r border-gray-200 last:border-r-0">
-                  <div dangerouslySetInnerHTML={{ __html: formatText(cell) }} />
-                </td>
+    <div className="my-8">
+      {content.caption && (
+        <div className="mb-4">
+          <h4 className="text-lg font-semibold text-gray-800 text-center">
+            {content.caption}
+          </h4>
+        </div>
+      )}
+      <div className="overflow-x-auto">
+        <table className="min-w-full divide-y divide-gray-200 border border-gray-300 rounded-lg shadow-sm">
+          <thead className="bg-gradient-to-r from-gray-50 to-gray-100">
+            <tr>
+              {content.headers.map((header, index) => (
+                <th key={index} className="px-4 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200 last:border-r-0">
+                  <div dangerouslySetInnerHTML={{ __html: formatText(header) }} />
+                </th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody className="bg-white divide-y divide-gray-200">
+            {content.rows.map((row, rowIndex) => (
+              <tr key={rowIndex} className="hover:bg-gray-50 transition-colors duration-200">
+                {row.map((cell, cellIndex) => (
+                  <td key={cellIndex} className="px-4 py-3 text-sm text-gray-900 border-r border-gray-200 last:border-r-0 align-top">
+                    <div dangerouslySetInnerHTML={{ __html: formatText(cell) }} />
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
@@ -133,26 +135,28 @@ function renderContent(content: ProjectContent): JSX.Element {
   }
 }
 
-function HierarchicalContentRenderer({ item, depth = 0 }: { item: HierarchicalContent; depth?: number }): JSX.Element {
+function HierarchicalContentRenderer({ item }: { item: HierarchicalContent }): JSX.Element {
   const hasLevel = item.level && item.text;
-  const { containerClass, headerClass } = hasLevel ? getLevelStyles(item.level!, depth) : { containerClass: 'mb-4', headerClass: '' };
+  const { containerClass, headerClass } = hasLevel ? getLevelStyles(item.level!) : { containerClass: 'mb-4', headerClass: '' };
 
-  // Get level badge color based on hierarchy
-  const getBadgeColor = (level: string, currentDepth: number) => {
+  // Get level badge color based on level pattern (consistent for same patterns)
+  const getBadgeColor = (level: string) => {
     const cleanLevel = level.trim().toUpperCase();
     const isTopLevel = /^[A-Z]\./.test(cleanLevel);
     const isRomanNumeral = /^(I{1,3}V?X?|IV|V|VI|VII|VIII|IX|X)\./.test(cleanLevel);
+    const isNumeric = /^\d+\./.test(cleanLevel);
     
     if (isTopLevel) return "text-white bg-blue-600";
     if (isRomanNumeral) return "text-blue-700 bg-blue-100";
-    return "text-gray-700 bg-gray-100";
+    if (isNumeric) return "text-gray-700 bg-gray-100";
+    return "text-gray-600 bg-gray-50";
   };
 
   return (
     <div className={containerClass}>
       {hasLevel && (
         <h3 className={headerClass}>
-          <span className={`font-mono text-sm px-3 py-1 rounded-lg font-semibold ${getBadgeColor(item.level!, depth)}`}>
+          <span className={`font-mono text-sm px-3 py-1 rounded-lg font-semibold ${getBadgeColor(item.level!)}`}>
             {item.level}
           </span>
           <span className="text-current">{item.text}</span>
@@ -163,7 +167,7 @@ function HierarchicalContentRenderer({ item, depth = 0 }: { item: HierarchicalCo
         {item.content?.map((contentItem, index) => {
           // Check if it's a hierarchical content item or a basic content item
           if ('level' in contentItem || ('content' in contentItem && Array.isArray(contentItem.content))) {
-            return <HierarchicalContentRenderer key={index} item={contentItem as HierarchicalContent} depth={depth + 1} />;
+            return <HierarchicalContentRenderer key={index} item={contentItem as HierarchicalContent} />;
           } else {
             return <div key={index}>{renderContent(contentItem as ProjectContent)}</div>;
           }
