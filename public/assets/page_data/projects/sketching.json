@@ -6,7 +6,7 @@
     "title": "Real-time Human Segmentation & Background Manipulation System",
     "description": "A cutting-edge computer vision system for real-time human segmentation and background removal using deep learning, achieving broadcast-quality results with optimized performance for production video applications.",
     "main_image": {
-        "url": "public/assets/image/page/p04_banner.jpg",
+        "url": "public/assets/image/page/p05_banner.jpg",
         "caption": "Real-time human segmentation demo showing precise edge detection and background replacement capabilities"
     },
     "problem_statement": [
