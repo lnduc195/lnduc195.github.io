@@ -86,7 +86,7 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
         <header className="mb-12">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-4">
-              <span className="text-gray-500">{blog.date}</span>
+              <span className="text-gray-500">{blog.end_date ? `${blog.start_date} - ${blog.end_date}` : blog.start_date}</span>
               <span className="text-green-600">{blog.readingTime}</span>
             </div>
             <div className="flex space-x-4">

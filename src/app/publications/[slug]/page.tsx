@@ -86,7 +86,7 @@ export default async function PublicationPage({ params }: { params: Promise<{ sl
         <header className="mb-12">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
             <div className="flex items-center space-x-4">
-              <span className="text-gray-500">{blog.date}</span>
+              <span className="text-gray-500">{blog.end_date ? `${blog.start_date} - ${blog.end_date}` : blog.start_date}</span>
               <span className="text-blue-600">{blog.readingTime}</span>
             </div>
             <div className="flex flex-wrap gap-2 sm:gap-4">

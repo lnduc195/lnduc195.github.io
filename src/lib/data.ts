@@ -29,7 +29,7 @@ export async function getProjectsData(): Promise<ProjectData[]> {
     }
 
     // Sort by date (newest first)
-    return projects.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    return projects.sort((a, b) => new Date(b.start_date).getTime() - new Date(a.start_date).getTime());
   } catch (error) {
     console.error('Error reading projects directory:', error);
     return [];
@@ -53,7 +53,7 @@ export async function getBlogData(): Promise<BlogData[]> {
       }
     }
 
-    return blogs.sort((a, b) => new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime());
+    return blogs.sort((a, b) => new Date(b.start_date || 0).getTime() - new Date(a.start_date || 0).getTime());
   } catch (error) {
     console.error('Error reading blogs directory:', error);
     return [];
@@ -77,7 +77,7 @@ export async function getPublicationsData(): Promise<BlogData[]> {
       }
     }
 
-    return publications.sort((a, b) => new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime());
+    return publications.sort((a, b) => new Date(b.start_date || 0).getTime() - new Date(a.start_date || 0).getTime());
   } catch (error) {
     console.error('Error reading publications directory:', error);
     return [];
