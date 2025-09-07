@@ -6,7 +6,7 @@
     "title": "Real-time Intelligent Color Detection & Manipulation Platform",
     "description": "An advanced computer vision system for real-time color detection and manipulation using sophisticated RGB analysis, object segmentation, and selective color transformation while preserving lighting and texture realism.",
     "main_image": {
-        "url": "public/assets/image/page/p03_banner.jpg",
+        "url": "public/assets/image/page/p03_banner.png",
         "caption": "Real-time color manipulation demonstration showing intelligent object detection and seamless color transformation"
     },
     "problem_statement": [
