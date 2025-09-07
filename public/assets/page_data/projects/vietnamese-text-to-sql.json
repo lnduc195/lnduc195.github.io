@@ -6,7 +6,7 @@
     "title": "Production-Grade Vietnamese Text-to-SQL Intelligence Platform",
     "description": "Enterprise-grade Vietnamese text-to-SQL platform with intelligent chatbot interface, auto-visualization, and advanced security - achieving 79.4% accuracy while democratizing data access for 500+ users across PostgreSQL and ClickHouse environments.",
     "main_image": {
-        "url": "https://cdn-front.freepik.com/images/ai/text-to-sql/query-interface.webp?w=1920&h=1920&q=75",
+        "url": "public/assets/image/page/p01_banner.png",
         "caption": "Vietnamese Text-to-SQL interface transforming natural language into precise SQL queries"
     },
     "content": [

@@ -8,7 +8,7 @@
     "title": "Enterprise Multi-Agent Chatbot Intelligence Platform",
     "description": "Advanced multi-agent chatbot platform featuring ReAct architecture with thinking-action loops, integrating SQL Agent, Doc Search, Web Search, and Influencer agents through MCP protocol - enabling autonomous task planning, parallel execution, and adaptive re-planning for comprehensive enterprise automation.",
     "main_image": {
-        "url": "public/assets/image/page/p01_banner.png",
+        "url": "public/assets/image/page/p02_banner.jpg",
         "caption": "Multi-agent chatbot platform orchestrating specialized agents through intelligent planning and execution cycles"
     },
     "content": [
