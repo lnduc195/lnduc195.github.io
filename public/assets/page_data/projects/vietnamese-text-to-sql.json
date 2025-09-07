@@ -9,472 +9,197 @@
         "url": "https://cdn-front.freepik.com/images/ai/text-to-sql/query-interface.webp?w=1920&h=1920&q=75",
         "caption": "Vietnamese Text-to-SQL interface transforming natural language into precise SQL queries"
     },
-    "problem_statement": {
-        "business_challenges": [
-            {
-                "challenge": "Enterprise Data Bottleneck",
-                "description": "Vietnamese businesses face 2-day delays accessing database insights due to SQL complexity and IT dependency, crippling data-driven decision making.",
-                "impact": "Slow decision velocity, missed market opportunities, dependency on technical teams"
-            },
-            {
-                "challenge": "Vietnamese NLP Gap", 
-                "description": "No production-ready text-to-SQL systems handle Vietnamese business terminology and complex query semantics at enterprise scale.",
-                "impact": "Limited data democratization, language barrier preventing business user adoption"
-            },
-            {
-                "challenge": "Schema Complexity Overwhelm",
-                "description": "Enterprise databases with 1000+ tables overwhelm traditional approaches, reducing accuracy below business requirements.",
-                "impact": "Poor query accuracy, user frustration, reduced trust in AI-generated results"
-            }
-        ],
-        "security_governance_challenges": [
-            {
-                "challenge": "Data Security & Governance",
-                "description": "Enterprise environments require granular access control, audit trails, and data isolation to prevent unauthorized access to sensitive business information.",
-                "impact": "Compliance risks, data breach vulnerabilities, inability to implement self-service analytics"
-            },
-            {
-                "challenge": "Query Ambiguity Risk",
-                "description": "Incomplete or unclear user questions can lead to catastrophic misinterpretation in data analysis, requiring intelligent clarification mechanisms.",
-                "impact": "Wrong business decisions, data misinterpretation disasters, loss of user confidence"
-            }
-        ],
-        "technical_challenges": [
-            {
-                "challenge": "Privacy vs Intelligence Tradeoff",
-                "description": "Traditional text-to-SQL systems either expose sensitive data to third-party LLMs or sacrifice accuracy with schema-only approaches.",
-                "impact": "Security concerns prevent enterprise adoption or poor accuracy limits business value"
-            },
-            {
-                "challenge": "LLM Quality vs Cost Balance",
-                "description": "OpenAI solutions offer lower costs but may miss critical information, while thorough analysis requires more expensive models.",
-                "impact": "Either incomplete analysis leading to wrong conclusions or prohibitive operational costs"
-            }
-        ]
-    },
-    "my_role": {
-        "leadership_roles": [
-            {
-                "role": "Lead NLP Engineer",
-                "responsibilities": "Architected Vietnamese text-to-SQL system using Claude API with anonymous database approach, achieving industry-leading 79.4% accuracy through privacy-preserving schema learning.",
-                "key_decisions": "Strategic choice of Claude over OpenAI for quality-first approach, design of thinking loop safety system"
-            },
-            {
-                "role": "Privacy & Security Architect", 
-                "responsibilities": "Developed innovative anonymous database architecture enabling few-shot learning for superior LLM understanding while maintaining zero sensitive data exposure.",
-                "key_innovations": "First-in-industry privacy-preserving schema learning, granular user isolation design"
-            }
-        ],
-        "technical_leadership": [
-            {
-                "role": "Production Systems Lead",
-                "responsibilities": "Built enterprise platform with chatbot interface, auto-visualization, granular security, and multi-database integration for mission-critical environments.",
-                "achievements": "Delivered production-grade system supporting 500+ users with 98% satisfaction"
-            },
-            {
-                "role": "Enterprise Integration Specialist",
-                "responsibilities": "Designed seamless integration capabilities with multi-task chatbot systems and enterprise workflows.",
-                "outcomes": "Enabled comprehensive enterprise automation beyond standalone SQL generation"
-            }
-        ]
-    },
-    "technical_solution": {
-        "core_innovations": [
-            {
-                "innovation": "Anonymous Database Architecture",
-                "description": "Revolutionary privacy-preserving approach using anonymized data samples enabling Claude to understand complex schema structures through few-shot learning rather than limited zero-shot schema-only understanding.",
-                "technical_breakthrough": "Solves privacy vs intelligence tradeoff - first solution to achieve both enterprise security and superior accuracy"
-            },
-            {
-                "innovation": "Strategic Claude API Selection",
-                "description": "Deliberate choice of Claude over OpenAI for superior thoroughness and intelligence despite higher costs, preventing information loss that occurs with overconfident shallow analysis.",
-                "business_rationale": "Quality over cost for enterprise accuracy - preventing critical information loss in business-critical data analysis"
-            }
-        ],
-        "ai_intelligence_layer": [
-            {
-                "component": "Privacy-First Design",
-                "description": "Anonymous database ensures zero sensitive data exposure to third-party LLMs while enabling sophisticated schema comprehension - critical for enterprise compliance and data security.",
-                "security_benefits": ["Zero data exposure to LLMs", "Compliance with enterprise data protection", "Elimination of data leak risks"]
-            },
-            {
-                "component": "RAG-Enhanced Concept Extraction", 
-                "description": "Retrieval-augmented generation with Claude API for precise business terminology understanding and contextual query optimization.",
-                "accuracy_improvements": "Superior Vietnamese business terminology understanding, contextual query generation"
-            },
-            {
-                "component": "Safety-First Query Generation",
-                "description": "Thinking loop system with Claude's reasoning capabilities ensures query clarification before execution, preventing data misinterpretation disasters.",
-                "risk_mitigation": "Prevents costly business decisions based on misinterpreted queries"
-            }
-        ],
-        "user_experience_layer": [
-            {
-                "component": "Intelligent Chatbot Interface",
-                "description": "Interactive conversational AI with thinking loops for query clarification, ensuring precise intent capture before SQL generation to prevent data misinterpretation.",
-                "user_benefits": "Intuitive natural language interaction, reduced learning curve, intelligent clarification"
-            },
-            {
-                "component": "Auto-Visualization Engine",
-                "description": "Dynamic chart generation with user-selectable visualization types (bar, line, pie, scatter plots) enabling immediate data insights without manual chart creation.",
-                "business_value": "Complete analysis workflow in single interface, no need for separate BI tools"
-            },
-            {
-                "component": "Follow-up Analysis Engine",
-                "description": "Intelligent result interpretation with automated follow-up question suggestions, enabling deeper data exploration and comprehensive business insights.",
-                "exploration_capabilities": "Guided data exploration, comprehensive business insights, automated analysis suggestions"
-            }
-        ],
-        "infrastructure_layer": [
-            {
-                "component": "Cloud-First Scalability",
-                "description": "Claude API integration enables immediate high-volume request handling without expensive on-premises infrastructure, ideal for rapid development and deployment cycles.",
-                "scalability_benefits": "Immediate high-volume capability, reduced infrastructure costs, faster deployment"
-            },
-            {
-                "component": "Multi-Database Integration",
-                "description": "Unified support for PostgreSQL and ClickHouse with connection pooling, performance optimization, and role-based access control for internal company users.",
-                "database_coverage": "Both transactional (PostgreSQL) and analytical (ClickHouse) workloads"
-            }
-        ],
-        "security_layer": [
-            {
-                "component": "Enterprise Security Framework",
-                "description": "READ-ONLY SQL enforcement with granular user-based data isolation ensuring each user accesses only their authorized datasets with comprehensive audit trails.",
-                "security_features": ["100% READ-ONLY enforcement", "Per-user data isolation", "Role-based access control", "Comprehensive audit trails"]
-            }
-        ]
-    },
-    "measurement_improvement": {
-        "accuracy_metrics": [
-            {
-                "metric": "Vietnamese Text-to-SQL Accuracy",
-                "achievement": "79.4% exact match on ViText2SQL benchmark",
-                "comparison": "50% improvement over existing Vietnamese text-to-SQL systems",
-                "significance": "Industry-leading accuracy for Vietnamese language"
-            },
-            {
-                "metric": "Schema Understanding Revolution",
-                "achievement": "Anonymous database approach achieves superior LLM understanding compared to schema-only methods",
-                "evidence": "Proving that structured data samples are essential for accurate query generation",
-                "innovation_impact": "Paradigm shift from schema-only to privacy-preserving few-shot learning"
-            }
-        ],
-        "user_experience_metrics": [
-            {
-                "metric": "User Success Rate",
-                "achievement": "95% success rate for non-technical users generating accurate SQL without IT assistance",
-                "impact": "Democratized data access across organization"
-            },
-            {
-                "metric": "User Satisfaction", 
-                "achievement": "98% user satisfaction with intuitive chatbot interface and intelligent query clarification",
-                "features": "Auto-visualization capabilities, thinking loop clarification, data misinterpretation risk reduction"
-            }
-        ],
-        "security_compliance_metrics": [
-            {
-                "metric": "Security & Compliance",
-                "achievement": "100% READ-ONLY enforcement with zero data breach incidents",
-                "framework": "Granular user isolation and comprehensive role-based access control for enterprise environments",
-                "compliance_value": "Meets enterprise data protection requirements"
-            },
-            {
-                "metric": "Privacy Protection",
-                "achievement": "Zero sensitive data exposure to third-party LLMs",
-                "method": "Anonymous database architecture maintaining complete data confidentiality",
-                "enterprise_benefit": "Enables enterprise adoption without privacy concerns"
-            }
-        ],
-        "performance_scalability_metrics": [
-            {
-                "metric": "Scalability & Performance",
-                "achievement": "Cloud-based Claude API enables immediate high-volume request handling",
-                "infrastructure_benefit": "No expensive on-premises infrastructure required",
-                "development_advantage": "Faster development and iteration cycles"
-            }
-        ]
-    },
-    "implementation_integration": {
-        "enterprise_integrations": [
-            {
-                "integration": "BI Platform Integration",
-                "description": "Direct embedding in Tableau, Power BI enabling natural language data exploration within existing analytics workflows",
-                "business_value": "Seamless integration with existing analytics stack"
-            },
-            {
-                "integration": "Enterprise Application Suite",
-                "description": "Seamless integration with CRM, ERP systems providing contextual data access without system switching",
-                "user_benefit": "Contextual data access within existing business workflows"
-            }
-        ],
-        "chatbot_ecosystem_integration": [
-            {
-                "integration": "Multi-Task Chatbot Integration",
-                "description": "Native compatibility with enterprise chatbot ecosystems, enabling SQL capabilities as part of comprehensive AI assistant workflows",
-                "scope": "Customer service, internal operations, and business intelligence automation",
-                "competitive_advantage": "Seamless enterprise automation workflows beyond standalone SQL generation"
-            }
-        ],
-        "api_architecture": [
-            {
-                "component": "API-First Design",
-                "description": "Comprehensive integration APIs supporting both synchronous and asynchronous processing",
-                "integration_flexibility": "Any business application integration, custom development support"
-            }
-        ]
-    },
-    "real_world_impact": {
-        "data_democratization": [
-            {
-                "impact": "Intelligent Data Interaction",
-                "description": "Chatbot interface with auto-visualization and follow-up analysis enables non-technical users to perform complex data exploration with zero SQL knowledge required",
-                "user_empowerment": "500+ business users empowered with independent database access",
-                "organizational_change": "Elimination of IT bottlenecks, accelerated decision velocity"
-            }
-        ],
-        "enterprise_transformation": [
-            {
-                "impact": "Enterprise Security Compliance",
-                "description": "Granular data isolation and READ-ONLY enforcement ensures regulatory compliance while enabling self-service analytics",
-                "environments": "PostgreSQL and ClickHouse environments",
-                "compliance_value": "Meets enterprise data protection and audit requirements"
-            },
-            {
-                "impact": "Business Agility Enhancement",
-                "description": "Transformed query resolution from 2-day IT requests to 30-second self-service",
-                "time_savings": "From 2 days to 30 seconds for data access",
-                "business_agility": "Real-time market response capability"
-            }
-        ],
-        "operational_excellence": [
-            {
-                "impact": "Enterprise Integration Excellence",
-                "description": "Seamless integration capabilities with multi-task chatbot systems, enabling comprehensive enterprise automation workflows",
-                "scope": "Beyond standalone SQL generation to complete enterprise automation",
-                "strategic_value": "Positions platform as core component of enterprise AI infrastructure"
-            }
-        ]
-    },
-    "company_alignment": {
-        "market_leadership": [
-            {
-                "positioning": "Innovation Pioneer",
-                "description": "First comprehensive Vietnamese text-to-SQL platform combining chatbot interface, auto-visualization, and enterprise security",
-                "market_impact": "Positioned company as industry pioneer in Vietnamese enterprise NLP"
-            },
-            {
-                "positioning": "Technology Leadership",
-                "description": "Anonymous database architecture represents breakthrough in privacy-preserving AI",
-                "industry_recognition": "First-in-industry solution solving privacy vs intelligence tradeoff"
-            }
-        ],
-        "competitive_differentiation": [
-            {
-                "differentiator": "Unique Technology Stack",
-                "description": "Combination of thinking loops, RAG-enhanced understanding, and granular security creates defensible market advantage",
-                "moat_strength": "Multiple breakthrough innovations creating high barriers to entry"
-            },
-            {
-                "differentiator": "Vietnamese Market Monopoly",
-                "description": "Complete monopoly in Vietnamese enterprise text-to-SQL space with 79.4% accuracy",
-                "market_opportunity": "Addresses underserved Vietnamese enterprise market"
-            }
-        ],
-        "enterprise_readiness": [
-            {
-                "capability": "Production-Grade Security",
-                "description": "User isolation, role-based access, and READ-ONLY enforcement addresses critical enterprise requirements",
-                "gap_analysis": "Missing features in competing solutions",
-                "enterprise_value": "Enables immediate enterprise deployment without security concerns"
-            },
-            {
-                "capability": "Quality-First Approach", 
-                "description": "Strategic Claude API selection prioritizes accuracy over cost optimization",
-                "market_positioning": "Premium enterprise segment focused on quality and reliability",
-                "competitive_advantage": "Prevents information loss that occurs with cost-optimized solutions"
-            }
-        ]
-    },
-    "comprehensive_market_analysis": {
-        "competitive_landscape": {
-            "enterprise_competitors": ["Text2SQL.ai", "Sequel.sh", "AskYourDatabase", "Vanna.AI"],
-            "llm_provider_solutions": ["OpenAI-based solutions", "Google Bard SQL", "GitHub Copilot"],
-            "cloud_provider_solutions": ["AWS Bedrock Text-to-SQL", "Google BigQuery AI", "Azure OpenAI"]
+    "problem_statement": [
+        {
+            "type": "text",
+            "text": "**Enterprise Data Bottleneck**: Vietnamese businesses face 2-day delays accessing database insights due to SQL complexity and IT dependency, crippling data-driven decision making. This leads to slow decision velocity, missed market opportunities, and dependency on technical teams."
         },
-        "detailed_comparison_matrix": {
-            "features": [
-                {
-                    "category": "Language Support",
-                    "feature": "Vietnamese Text-to-SQL",
-                    "our_solution": "✅ 79.4% accuracy with specialized Vietnamese understanding",
-                    "text2sql_ai": "❌ English-only focus",
-                    "sequel_sh": "❌ English-only",
-                    "askyourdatabase": "❌ Limited multilingual support",
-                    "openai_solutions": "❌ Basic Vietnamese, not specialized",
-                    "competitive_advantage": "First-in-class Vietnamese enterprise solution"
-                },
-                {
-                    "category": "Privacy & Security", 
-                    "feature": "Anonymous Database Architecture",
-                    "our_solution": "✅ Privacy-preserving schema learning with zero data exposure",
-                    "text2sql_ai": "❌ Standard schema sharing",
-                    "sequel_sh": "❌ Traditional approach",
-                    "askyourdatabase": "❌ No anonymization",
-                    "openai_solutions": "❌ Direct data exposure risks",
-                    "competitive_advantage": "Revolutionary privacy-first approach"
-                },
-                {
-                    "category": "Safety Features",
-                    "feature": "Thinking Loop Clarification",
-                    "our_solution": "✅ Multi-step clarification before SQL generation",
-                    "text2sql_ai": "❌ Direct SQL generation",
-                    "sequel_sh": "❌ Immediate query creation",
-                    "askyourdatabase": "❌ No clarification loop",
-                    "openai_solutions": "❌ Direct generation approach",
-                    "competitive_advantage": "Prevents data misinterpretation disasters"
-                },
-                {
-                    "category": "User Experience",
-                    "feature": "Integrated Auto-Visualization",
-                    "our_solution": "✅ User-selectable chart types with automatic generation",
-                    "text2sql_ai": "❌ SQL-only output",
-                    "sequel_sh": "✅ Basic visualization capabilities",
-                    "askyourdatabase": "Partial - limited chart options",
-                    "openai_solutions": "❌ Requires separate tools",
-                    "competitive_advantage": "Complete analysis workflow in single interface"
-                },
-                {
-                    "category": "Security Architecture",
-                    "feature": "Granular User Isolation",
-                    "our_solution": "✅ Per-user data isolation with role-based access control",
-                    "text2sql_ai": "❌ No user isolation",
-                    "sequel_sh": "Basic user management",
-                    "askyourdatabase": "Basic isolation features",
-                    "openai_solutions": "❌ Depends on implementation",
-                    "competitive_advantage": "Enterprise-grade security from day one"
-                },
-                {
-                    "category": "Database Support",
-                    "feature": "High-Performance Analytics",
-                    "our_solution": "✅ PostgreSQL + ClickHouse for transactional + analytical",
-                    "text2sql_ai": "Limited database support",
-                    "sequel_sh": "Standard SQL databases",
-                    "askyourdatabase": "Multiple databases but no ClickHouse",
-                    "openai_solutions": "Varies by implementation",
-                    "competitive_advantage": "Covers both OLTP and OLAP workloads"
-                },
-                {
-                    "category": "Data Protection",
-                    "feature": "READ-ONLY Query Enforcement",
-                    "our_solution": "✅ 100% prevention of data modification",
-                    "text2sql_ai": "❌ No built-in protection",
-                    "sequel_sh": "❌ Relies on database permissions",
-                    "askyourdatabase": "✅ Has READ-ONLY enforcement",
-                    "openai_solutions": "❌ Implementation dependent",
-                    "competitive_advantage": "Built-in data protection at application level"
-                },
-                {
-                    "category": "AI Quality",
-                    "feature": "LLM Selection Strategy",
-                    "our_solution": "✅ Claude Sonnet - thorough analysis despite higher cost",
-                    "text2sql_ai": "Mixed - varies by pricing tier",
-                    "sequel_sh": "❌ Basic models for cost optimization",
-                    "askyourdatabase": "Mixed - primarily OpenAI focus",
-                    "openai_solutions": "⚠️ Lower cost but potential information loss",
-                    "competitive_advantage": "Quality-first approach prevents critical information loss"
-                },
-                {
-                    "category": "Integration",
-                    "feature": "Multi-Task Chatbot Ready",
-                    "our_solution": "✅ Native integration with enterprise chatbot ecosystems",
-                    "text2sql_ai": "❌ Standalone solution",
-                    "sequel_sh": "❌ Limited integration options",
-                    "askyourdatabase": "Limited - basic API",
-                    "openai_solutions": "❌ Requires custom development",
-                    "competitive_advantage": "Seamless enterprise automation workflows"
-                }
-            ]
+        {
+            "type": "text",
+            "text": "**Vietnamese NLP Gap**: No production-ready text-to-SQL systems handle Vietnamese business terminology and complex query semantics at enterprise scale, resulting in limited data democratization and language barriers preventing business user adoption."
         },
-        "market_positioning": {
-            "our_solution": "Premium enterprise-grade Vietnamese text-to-SQL with privacy-first architecture",
-            "text2sql_ai": "Budget-friendly English-only basic text-to-SQL",
-            "sequel_sh": "Mid-market with basic visualization",
-            "askyourdatabase": "Enterprise-focused but limited security features",
-            "openai_solutions": "Cost-optimized but incomplete analysis risk"
+        {
+            "type": "text",
+            "text": "**Schema Complexity Overwhelm**: Enterprise databases with 1000+ tables overwhelm traditional approaches, reducing accuracy below business requirements and causing poor query accuracy, user frustration, and reduced trust in AI-generated results."
+        },
+        {
+            "type": "text",
+            "text": "**Data Security & Governance**: Enterprise environments require granular access control, audit trails, and data isolation to prevent unauthorized access to sensitive business information, creating compliance risks and data breach vulnerabilities."
+        },
+        {
+            "type": "text",
+            "text": "**Query Ambiguity Risk**: Incomplete or unclear user questions can lead to catastrophic misinterpretation in data analysis, requiring intelligent clarification mechanisms to prevent wrong business decisions and data misinterpretation disasters."
+        },
+        {
+            "type": "text",
+            "text": "**Privacy vs Intelligence Tradeoff**: Traditional text-to-SQL systems either expose sensitive data to third-party LLMs or sacrifice accuracy with schema-only approaches, creating security concerns that prevent enterprise adoption or poor accuracy that limits business value."
+        },
+        {
+            "type": "text",
+            "text": "**LLM Quality vs Cost Balance**: OpenAI solutions offer lower costs but may miss critical information, while thorough analysis requires more expensive models, resulting in either incomplete analysis leading to wrong conclusions or prohibitive operational costs."
         }
-    },
-    "technical_decisions_rationale": {
-        "claude_vs_openai_analysis": {
-            "decision_rationale": "Quality over cost for enterprise accuracy - preventing critical information loss in business-critical data analysis",
-            "claude_advantages": [
-                "Superior thoroughness in data analysis and reasoning",
-                "More intelligent handling of complex Vietnamese contexts", 
-                "Comprehensive information extraction without shortcuts",
-                "Better understanding of nuanced business terminology",
-                "More reliable for enterprise-grade accuracy requirements"
-            ],
-            "claude_disadvantages": [
-                "Higher token costs than OpenAI (significant cost difference)",
-                "More expensive per request due to thorough analysis",
-                "Tendency to extract more data (thorough but increases costs)",
-                "Higher operational costs for high-volume usage"
-            ],
-            "openai_comparison": [
-                "OpenAI: More confident but may miss critical business information",
-                "OpenAI: Lower cost but potentially incomplete analysis leading to wrong conclusions",
-                "OpenAI: Faster processing but sacrifices comprehensiveness",
-                "Claude: Higher cost but comprehensive understanding and accuracy",
-                "Enterprise Decision: Quality and completeness over cost optimization"
-            ],
-            "model_selection": {
-                "chosen_model": "Claude Sonnet",
-                "rationale": "Sufficient power for Vietnamese text-to-SQL without need for Opus complexity",
-                "cost_optimization": "Sonnet provides optimal balance of capability and cost efficiency"
-            }
+    ],
+    "my_role": [
+        {
+            "type": "text",
+            "text": "**Lead NLP Engineer**: Architected Vietnamese text-to-SQL system using Claude API with anonymous database approach, achieving industry-leading 79.4% accuracy through privacy-preserving schema learning. Made strategic choice of Claude over OpenAI for quality-first approach and designed thinking loop safety system."
         },
-        "anonymous_database_innovation": {
-            "problem_identified": "Schema-only approach insufficient for LLM understanding of complex database relationships",
-            "solution_approach": "Few-shot learning using anonymized data samples for deep schema comprehension",
-            "privacy_benefits": [
-                "Zero sensitive data exposure to third-party LLMs (Claude API)",
-                "Complete elimination of data leak risks during request processing",
-                "Compliance with enterprise data protection requirements",
-                "Maintains confidentiality while enabling intelligent analysis"
-            ],
-            "technical_benefits": [
-                "Superior schema understanding compared to metadata-only approaches",
-                "Enables complex relationship comprehension through sample data",
-                "Mimics few-shot learning paradigm for better AI performance",
-                "Provides context that pure schema definitions cannot convey"
-            ],
-            "scalability_advantages": [
-                "Cloud-based deployment without expensive on-premises infrastructure",
-                "Immediate high-volume request handling capability",
-                "Faster development and iteration cycles",
-                "Reduced initial infrastructure investment requirements"
-            ]
+        {
+            "type": "text",
+            "text": "**Privacy & Security Architect**: Developed innovative anonymous database architecture enabling few-shot learning for superior LLM understanding while maintaining zero sensitive data exposure. Created first-in-industry privacy-preserving schema learning and granular user isolation design."
+        },
+        {
+            "type": "text",
+            "text": "**Production Systems Lead**: Built enterprise platform with chatbot interface, auto-visualization, granular security, and multi-database integration for mission-critical environments. Delivered production-grade system supporting 500+ users with 98% satisfaction."
+        },
+        {
+            "type": "text",
+            "text": "**Enterprise Integration Specialist**: Designed seamless integration capabilities with multi-task chatbot systems and enterprise workflows, enabling comprehensive enterprise automation beyond standalone SQL generation."
         }
-    },
-    "cost_benefit_analysis": {
-        "claude_api_costs": {
-            "higher_token_costs": "Significant increase compared to OpenAI pricing",
-            "comprehensive_analysis": "More thorough data extraction and processing",
-            "justification": "Enterprise accuracy requirements outweigh cost considerations",
-            "roi_calculation": "Prevents costly business errors that would exceed LLM cost differences"
+    ],
+    "technical_solution": [
+        {
+            "type": "text",
+            "text": "**Anonymous Database Architecture**: Revolutionary privacy-preserving approach using anonymized data samples enabling Claude to understand complex schema structures through few-shot learning rather than limited zero-shot schema-only understanding. This breakthrough solves the privacy vs intelligence tradeoff - the first solution to achieve both enterprise security and superior accuracy."
         },
-        "infrastructure_savings": {
-            "no_onpremises_costs": "Eliminates expensive initial infrastructure investment",
-            "cloud_scalability": "Immediate high-volume capability without hardware procurement",
-            "development_speed": "Faster iteration and deployment cycles",
-            "maintenance_reduction": "No hardware maintenance or scaling complexity"
+        {
+            "type": "text",
+            "text": "**Strategic Claude API Selection**: Deliberate choice of Claude over OpenAI for superior thoroughness and intelligence despite higher costs, preventing information loss that occurs with overconfident shallow analysis. This quality-first approach prevents critical information loss in business-critical data analysis."
         },
-        "competitive_pricing_strategy": {
-            "premium_positioning": "Quality-first approach rather than cost competition",
-            "value_justification": "Unique features and enterprise security justify higher pricing",
-            "target_market": "Enterprise customers prioritizing accuracy and security over cost"
+        {
+            "type": "text",
+            "text": "**Privacy-First Design**: Anonymous database ensures zero sensitive data exposure to third-party LLMs while enabling sophisticated schema comprehension - critical for enterprise compliance and data security. Provides compliance with enterprise data protection and eliminates data leak risks."
+        },
+        {
+            "type": "text",
+            "text": "**RAG-Enhanced Concept Extraction**: Retrieval-augmented generation with Claude API for precise business terminology understanding and contextual query optimization, delivering superior Vietnamese business terminology understanding and contextual query generation."
+        },
+        {
+            "type": "text",
+            "text": "**Safety-First Query Generation**: Thinking loop system with Claude's reasoning capabilities ensures query clarification before execution, preventing data misinterpretation disasters and costly business decisions based on misinterpreted queries."
+        },
+        {
+            "type": "image",
+            "url": "https://cdn-front.freepik.com/images/ai/text-to-sql/architecture-diagram.webp?w=1920&h=1920&q=75",
+            "caption": "System architecture showing anonymous database approach, Claude API integration, and multi-layer security framework"
+        },
+        {
+            "type": "text",
+            "text": "**Intelligent Chatbot Interface**: Interactive conversational AI with thinking loops for query clarification, ensuring precise intent capture before SQL generation to prevent data misinterpretation. Provides intuitive natural language interaction and reduced learning curve."
+        },
+        {
+            "type": "text",
+            "text": "**Auto-Visualization Engine**: Dynamic chart generation with user-selectable visualization types (bar, line, pie, scatter plots) enabling immediate data insights without manual chart creation. Delivers complete analysis workflow in single interface, eliminating need for separate BI tools."
+        },
+        {
+            "type": "text",
+            "text": "**Follow-up Analysis Engine**: Intelligent result interpretation with automated follow-up question suggestions, enabling deeper data exploration and comprehensive business insights through guided data exploration."
+        },
+        {
+            "type": "text",
+            "text": "**Cloud-First Scalability**: Claude API integration enables immediate high-volume request handling without expensive on-premises infrastructure, ideal for rapid development and deployment cycles with reduced infrastructure costs."
+        },
+        {
+            "type": "text",
+            "text": "**Multi-Database Integration**: Unified support for PostgreSQL and ClickHouse with connection pooling, performance optimization, and role-based access control covering both transactional and analytical workloads."
+        },
+        {
+            "type": "text",
+            "text": "**Enterprise Security Framework**: READ-ONLY SQL enforcement with granular user-based data isolation ensuring each user accesses only their authorized datasets with comprehensive audit trails, per-user data isolation, and role-based access control."
         }
-    },
+    ],
+    "measurement_improvement": [
+        {
+            "type": "text",
+            "text": "**Vietnamese Text-to-SQL Accuracy**: Achieved 79.4% exact match on ViText2SQL benchmark, representing a 50% improvement over existing Vietnamese text-to-SQL systems and establishing industry-leading accuracy for Vietnamese language processing."
+        },
+        {
+            "type": "text",
+            "text": "**Schema Understanding Revolution**: Anonymous database approach achieves superior LLM understanding compared to schema-only methods, proving that structured data samples are essential for accurate query generation. This represents a paradigm shift from schema-only to privacy-preserving few-shot learning."
+        },
+        {
+            "type": "text",
+            "text": "**User Success Rate**: Achieved 95% success rate for non-technical users generating accurate SQL without IT assistance, democratizing data access across the organization and eliminating traditional IT bottlenecks."
+        },
+        {
+            "type": "text",
+            "text": "**User Satisfaction**: Delivered 98% user satisfaction with intuitive chatbot interface and intelligent query clarification, featuring auto-visualization capabilities, thinking loop clarification, and data misinterpretation risk reduction."
+        },
+        {
+            "type": "text",
+            "text": "**Security & Compliance**: Maintained 100% READ-ONLY enforcement with zero data breach incidents through granular user isolation and comprehensive role-based access control, meeting enterprise data protection requirements."
+        },
+        {
+            "type": "text",
+            "text": "**Privacy Protection**: Achieved zero sensitive data exposure to third-party LLMs through anonymous database architecture maintaining complete data confidentiality, enabling enterprise adoption without privacy concerns."
+        },
+        {
+            "type": "text",
+            "text": "**Scalability & Performance**: Cloud-based Claude API enables immediate high-volume request handling without expensive on-premises infrastructure, providing faster development and iteration cycles."
+        }
+    ],
+    "implementation_integration": [
+        {
+            "type": "text",
+            "text": "**BI Platform Integration**: Direct embedding in Tableau and Power BI enabling natural language data exploration within existing analytics workflows, providing seamless integration with existing analytics stack."
+        },
+        {
+            "type": "text",
+            "text": "**Enterprise Application Suite**: Seamless integration with CRM and ERP systems providing contextual data access without system switching, enabling contextual data access within existing business workflows."
+        },
+        {
+            "type": "text",
+            "text": "**Multi-Task Chatbot Integration**: Native compatibility with enterprise chatbot ecosystems, enabling SQL capabilities as part of comprehensive AI assistant workflows spanning customer service, internal operations, and business intelligence automation."
+        },
+        {
+            "type": "text",
+            "text": "**API-First Design**: Comprehensive integration APIs supporting both synchronous and asynchronous processing, enabling any business application integration with custom development support and maximum integration flexibility."
+        }
+    ],
+    "real_world_impact": [
+        {
+            "type": "text",
+            "text": "**Intelligent Data Interaction**: Chatbot interface with auto-visualization and follow-up analysis enables non-technical users to perform complex data exploration with zero SQL knowledge required, empowering 500+ business users with independent database access and eliminating IT bottlenecks while accelerating decision velocity."
+        },
+        {
+            "type": "text",
+            "text": "**Enterprise Security Compliance**: Granular data isolation and READ-ONLY enforcement ensures regulatory compliance while enabling self-service analytics across PostgreSQL and ClickHouse environments, meeting enterprise data protection and audit requirements."
+        },
+        {
+            "type": "text",
+            "text": "**Business Agility Enhancement**: Transformed query resolution from 2-day IT requests to 30-second self-service, enabling real-time market response capability and dramatically improving business agility."
+        },
+        {
+            "type": "text",
+            "text": "**Enterprise Integration Excellence**: Seamless integration capabilities with multi-task chatbot systems enable comprehensive enterprise automation workflows beyond standalone SQL generation, positioning the platform as a core component of enterprise AI infrastructure."
+        }
+    ],
+    "company_alignment": [
+        {
+            "type": "text",
+            "text": "**Innovation Pioneer**: First comprehensive Vietnamese text-to-SQL platform combining chatbot interface, auto-visualization, and enterprise security, positioning the company as industry pioneer in Vietnamese enterprise NLP."
+        },
+        {
+            "type": "text",
+            "text": "**Technology Leadership**: Anonymous database architecture represents breakthrough in privacy-preserving AI, establishing the first-in-industry solution solving privacy vs intelligence tradeoff."
+        },
+        {
+            "type": "text",
+            "text": "**Unique Technology Stack**: Combination of thinking loops, RAG-enhanced understanding, and granular security creates defensible market advantage through multiple breakthrough innovations creating high barriers to entry."
+        },
+        {
+            "type": "text",
+            "text": "**Vietnamese Market Monopoly**: Complete monopoly in Vietnamese enterprise text-to-SQL space with 79.4% accuracy, addressing the underserved Vietnamese enterprise market with no comparable competitors."
+        },
+        {
+            "type": "text",
+            "text": "**Production-Grade Security**: User isolation, role-based access, and READ-ONLY enforcement addresses critical enterprise requirements missing in competing solutions, enabling immediate enterprise deployment without security concerns."
+        },
+        {
+            "type": "text",
+            "text": "**Quality-First Approach**: Strategic Claude API selection prioritizes accuracy over cost optimization, targeting premium enterprise segment focused on quality and reliability while preventing information loss that occurs with cost-optimized solutions."
+        }
+    ],
     "technologies": [
         "Python",
         "Claude API (Sonnet)",
