@@ -28,29 +28,45 @@ function processImageUrl(url: string): string {
   return url;
 }
 
-function getLevelStyles(level: string): { containerClass: string; headerClass: string } {
-  // Map different level formats to consistent styling
-  const levelChar = level.charAt(0).toUpperCase();
-  const isRomanNumeral = level.includes('I');
+function getLevelStyles(level: string, depth: number = 0): { containerClass: string; headerClass: string } {
+  // Normalize level format detection
+  const cleanLevel = level.trim().toUpperCase();
+  const isTopLevel = /^[A-Z]\./.test(cleanLevel);
+  const isRomanNumeral = /^(I{1,3}V?X?|IV|V|VI|VII|VIII|IX|X)\./.test(cleanLevel);
+  const isNumeric = /^\d+\./.test(cleanLevel);
   
-  if (levelChar >= 'A' && levelChar <= 'Z' && !isRomanNumeral) {
-    // Top level (A, B, C, etc.)
-    return {
-      containerClass: "mb-16 border-l-4 border-blue-500 pl-6",
-      headerClass: "text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3"
-    };
-  } else if (isRomanNumeral) {
-    // Second level (I, II, III, etc.)
-    return {
-      containerClass: "mb-12 border-l-2 border-gray-300 pl-6 ml-4",
-      headerClass: "text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-3"
-    };
-  } else {
-    // Third level or deeper
-    return {
-      containerClass: "mb-8 pl-4 ml-8",
-      headerClass: "text-xl font-medium text-gray-700 mb-4 flex items-center gap-3"
-    };
+  // Determine hierarchy based on pattern and depth
+  let hierarchyLevel = depth;
+  if (isTopLevel) hierarchyLevel = 0;
+  else if (isRomanNumeral) hierarchyLevel = 1;
+  else if (isNumeric) hierarchyLevel = 2;
+  else hierarchyLevel = Math.max(depth, 2);
+  
+  switch (hierarchyLevel) {
+    case 0:
+      // Top level (A, B, C, etc.)
+      return {
+        containerClass: "mb-16 border-l-4 border-blue-500 pl-6 bg-gradient-to-r from-blue-50 to-transparent py-4",
+        headerClass: "text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3"
+      };
+    case 1:
+      // Second level (I, II, III, etc.)
+      return {
+        containerClass: "mb-12 border-l-2 border-blue-400 pl-6 ml-4 bg-gradient-to-r from-blue-50 to-transparent py-3",
+        headerClass: "text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-3"
+      };
+    case 2:
+      // Third level (1, 2, 3, etc.)
+      return {
+        containerClass: "mb-10 border-l-2 border-blue-200 pl-6 ml-8 bg-gradient-to-r from-gray-50 to-transparent py-2",
+        headerClass: "text-xl font-medium text-gray-700 mb-4 flex items-center gap-3"
+      };
+    default:
+      // Fourth level and deeper
+      return {
+        containerClass: "mb-8 border-l border-gray-200 pl-4 ml-12 py-2",
+        headerClass: "text-lg font-medium text-gray-600 mb-3 flex items-center gap-2"
+      };
   }
 }
 
@@ -117,26 +133,37 @@ function renderContent(content: ProjectContent): JSX.Element {
   }
 }
 
-function HierarchicalContentRenderer({ item }: { item: HierarchicalContent }): JSX.Element {
+function HierarchicalContentRenderer({ item, depth = 0 }: { item: HierarchicalContent; depth?: number }): JSX.Element {
   const hasLevel = item.level && item.text;
-  const { containerClass, headerClass } = hasLevel ? getLevelStyles(item.level!) : { containerClass: '', headerClass: '' };
+  const { containerClass, headerClass } = hasLevel ? getLevelStyles(item.level!, depth) : { containerClass: 'mb-4', headerClass: '' };
+
+  // Get level badge color based on hierarchy
+  const getBadgeColor = (level: string, currentDepth: number) => {
+    const cleanLevel = level.trim().toUpperCase();
+    const isTopLevel = /^[A-Z]\./.test(cleanLevel);
+    const isRomanNumeral = /^(I{1,3}V?X?|IV|V|VI|VII|VIII|IX|X)\./.test(cleanLevel);
+    
+    if (isTopLevel) return "text-white bg-blue-600";
+    if (isRomanNumeral) return "text-blue-700 bg-blue-100";
+    return "text-gray-700 bg-gray-100";
+  };
 
   return (
-    <div className={hasLevel ? containerClass : ''}>
+    <div className={containerClass}>
       {hasLevel && (
         <h3 className={headerClass}>
-          <span className="text-blue-600 font-mono text-sm bg-blue-50 px-2 py-1 rounded">
+          <span className={`font-mono text-sm px-3 py-1 rounded-lg font-semibold ${getBadgeColor(item.level!, depth)}`}>
             {item.level}
           </span>
-          {item.text}
+          <span className="text-current">{item.text}</span>
         </h3>
       )}
       
-      <div className="space-y-6">
+      <div className={hasLevel ? "space-y-4 mt-6" : "space-y-4"}>
         {item.content?.map((contentItem, index) => {
           // Check if it's a hierarchical content item or a basic content item
           if ('level' in contentItem || ('content' in contentItem && Array.isArray(contentItem.content))) {
-            return <HierarchicalContentRenderer key={index} item={contentItem as HierarchicalContent} />;
+            return <HierarchicalContentRenderer key={index} item={contentItem as HierarchicalContent} depth={depth + 1} />;
           } else {
             return <div key={index}>{renderContent(contentItem as ProjectContent)}</div>;
           }
