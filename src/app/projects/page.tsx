@@ -2,12 +2,21 @@ import { getProjectsData } from '@/lib/data';
 import Link from 'next/link';
 import { ProjectData } from '@/types';
 
+function processImageUrl(url: string): string {
+  // Convert relative paths starting with "public/" to web-accessible paths
+  if (url.startsWith('public/')) {
+    return '/' + url.substring(7); // Remove "public/" and add leading "/"
+  }
+  // Return absolute URLs and already processed relative paths as-is
+  return url;
+}
+
 function ProjectCard({ project }: { project: ProjectData }) {
   return (
     <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
       <div className="aspect-video relative overflow-hidden rounded-t-lg">
         <img
-          src={project.main_image.url}
+          src={processImageUrl(project.main_image.url)}
           alt={project.title}
           className="w-full h-full object-cover"
         />
