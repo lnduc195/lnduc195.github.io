@@ -6,7 +6,7 @@
     "title": "Real-time Intelligent Color Detection & Manipulation Platform",
     "description": "An advanced computer vision system for real-time color detection and manipulation using sophisticated RGB analysis, object segmentation, and selective color transformation while preserving lighting and texture realism.",
     "main_image": {
-        "url": "https://cdn-front.freepik.com/images/ai/color-manipulation/color-change-demo.webp?w=1920&h=1920&q=75",
+        "url": "public/assets/image/page/p03_banner.jpg",
         "caption": "Real-time color manipulation demonstration showing intelligent object detection and seamless color transformation"
     },
     "problem_statement": [
@@ -60,7 +60,7 @@
         },
         {
             "type": "image",
-            "url": "https://cdn-front.freepik.com/images/ai/color-manipulation/processing-pipeline.webp?w=1920&h=1920&q=75",
+            "url": "public/assets/image/page/p03_01.png",
             "caption": "Color manipulation pipeline showing object detection, color analysis, and realistic transformation stages"
         },
         {
