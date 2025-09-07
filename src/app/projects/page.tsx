@@ -14,11 +14,11 @@ function processImageUrl(url: string): string {
 function ProjectCard({ project }: { project: ProjectData }) {
   return (
     <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-      <div className="aspect-video relative overflow-hidden rounded-t-lg">
+      <div className="aspect-video relative overflow-hidden rounded-t-lg bg-gray-100">
         <img
           src={processImageUrl(project.main_image.url)}
           alt={project.title}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
         {project.highlight && (
           <div className="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">

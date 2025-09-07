@@ -117,13 +117,15 @@ function renderContent(content: ProjectContent): JSX.Element {
     case 'image':
       return (
         <div className="my-8">
-          <img
-            src={processImageUrl(content.url || '')}
-            alt={content.caption || ''}
-            className="w-full rounded-lg shadow-md"
-          />
+          <div className="bg-gray-100 rounded-lg p-4 flex justify-center items-center">
+            <img
+              src={processImageUrl(content.url || '')}
+              alt={content.caption || ''}
+              className="max-w-full h-auto max-h-96 object-contain rounded-lg shadow-md"
+            />
+          </div>
           {content.caption && (
-            <p className="text-sm text-gray-500 mt-2 text-center italic">
+            <p className="text-sm text-gray-500 mt-4 text-center italic">
               {content.caption}
             </p>
           )}
@@ -222,11 +224,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         
         <p className="text-xl text-gray-600 mb-8">{project.description}</p>
         
-        <div className="aspect-video relative overflow-hidden rounded-lg mb-8">
+        <div className="relative overflow-hidden rounded-lg mb-8 bg-gray-100">
           <img
             src={processImageUrl(project.main_image.url)}
             alt={project.title}
-            className="w-full h-full object-cover"
+            className="w-full h-auto max-h-96 object-contain mx-auto"
           />
         </div>
         
