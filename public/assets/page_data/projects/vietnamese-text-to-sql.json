@@ -412,7 +412,7 @@
             "text": "Comprehensive Market Analysis",
             "content": [
                 {
-                    "level": "I.",
+                    "level": "1.",
                     "text": "Competitive Landscape",
                     "content": [
                         {
@@ -430,7 +430,7 @@
                     ]
                 },
                 {
-                    "level": "II.",
+                    "level": "2.",
                     "text": "Detailed Comparison Matrix",
                     "content": [
                         {
@@ -451,7 +451,7 @@
                     ]
                 },
                 {
-                    "level": "III.",
+                    "level": "II.",
                     "text": "Market Positioning",
                     "content": [
                         {
