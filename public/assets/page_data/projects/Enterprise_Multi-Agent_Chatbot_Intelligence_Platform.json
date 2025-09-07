@@ -1,6 +1,8 @@
 {
     "id": "multi-agent-chatbot-platform",
-    "author": ["Ngoc Duc"],
+    "author": [
+        "Ngoc Duc"
+    ],
     "highlight": true,
     "date": "2024-03-08",
     "title": "Enterprise Multi-Agent Chatbot Intelligence Platform",
@@ -72,11 +74,11 @@
                     "content": [
                         {
                             "type": "text",
-                            "text": "**Chief Multi-Agent Architect**: Designed comprehensive ReAct-based multi-agent platform integrating four specialized agents through MCP protocol, enabling autonomous task planning, parallel execution, and adaptive re-planning for enterprise automation."
+                            "text": "Project Manager and Chief Multi-Agent Architect: As the sole manager and planner of the entire project, I oversaw all aspects from initial concept to final deployment, designing the comprehensive ReAct-based multi-agent platform integrating four specialized agents through MCP protocol, enabling autonomous task planning, parallel execution, and adaptive re-planning for enterprise automation."
                         },
                         {
                             "type": "text",
-                            "text": "**AI Orchestration Strategist**: Developed innovative thinking-action loop architecture allowing simultaneous multi-task execution after planning while enabling dynamic re-planning based on intermediate results for optimal workflow optimization."
+                            "text": "AI Orchestration Strategist and Planner: I managed the full project lifecycle, including resource allocation and timeline planning, while developing the innovative thinking-action loop architecture allowing simultaneous multi-task execution after planning and enabling dynamic re-planning based on intermediate results for optimal workflow optimization."
                         }
                     ]
                 },
@@ -86,11 +88,11 @@
                     "content": [
                         {
                             "type": "text",
-                            "text": "**MCP Protocol Implementation Lead**: Architected Model Context Protocol integration enabling seamless communication between heterogeneous agents while maintaining context persistence and intelligent coordination across specialized domains."
+                            "text": "MCP Protocol Implementation Lead and Project Overseer: I planned and managed the end-to-end implementation of the Model Context Protocol, architecting its integration to enable seamless communication between heterogeneous agents while maintaining context persistence and intelligent coordination across specialized domains throughout the project."
                         },
                         {
                             "type": "text",
-                            "text": "**Hybrid LLM Strategy Architect**: Designed strategic LLM allocation using Gemini for RAG operations, Claude for planning and coordination, optimizing performance and cost efficiency across diverse agent functionalities."
+                            "text": "Hybrid LLM Strategy Architect and Manager: I directed the overall project strategy, including the design of strategic LLM allocation using Gemini for RAG operations and Claude for planning and coordination, optimizing performance and cost efficiency across diverse agent functionalities while ensuring alignment with project goals and timelines."
                         }
                     ]
                 }
@@ -403,16 +405,88 @@
                     "content": [
                         {
                             "type": "table",
-                            "headers": ["Capability", "Our Platform", "MS Bot Framework", "Google Dialogflow", "UiPath", "MS Copilot", "Competitive Advantage"],
+                            "headers": [
+                                "Capability",
+                                "Our Platform",
+                                "MS Bot Framework",
+                                "Google Dialogflow",
+                                "UiPath",
+                                "MS Copilot",
+                                "Competitive Advantage"
+                            ],
                             "rows": [
-                                ["Multi-Agent Coordination", "✅ ReAct with MCP protocol", "❌ Single-agent only", "❌ Single-agent only", "❌ No agent concept", "❌ Single-model approach", "Revolutionary multi-agent orchestration"],
-                                ["Parallel Task Execution", "✅ Simultaneous multi-agent", "❌ Sequential processing", "❌ Sequential processing", "❌ Sequential workflows", "❌ Sequential processing", "Superior efficiency through parallelization"],
-                                ["Adaptive Re-planning", "✅ Dynamic optimization", "❌ Static workflows", "❌ Static flows", "❌ Predefined workflows", "❌ No re-planning", "Intelligent workflow optimization"],
-                                ["Thinking-Action Loops", "✅ Sophisticated reasoning cycles", "❌ Simple request-response", "❌ Basic dialogue flows", "❌ Rule-based automation", "❌ Direct execution", "Advanced reasoning and optimization"],
-                                ["Specialized Agent Integration", "✅ SQL/Doc/Web/Influencer", "❌ Generic capabilities", "❌ Generic capabilities", "❌ No AI agents", "❌ General purpose only", "Domain-specialized intelligence"],
-                                ["Context Persistence", "✅ Advanced memory management", "Basic context handling", "Basic context handling", "❌ No context awareness", "Basic context handling", "Superior context retention"],
-                                ["LLM Strategy Optimization", "✅ Gemini/Claude hybrid", "Single model approach", "Single model approach", "❌ No LLM integration", "Single model approach", "Strategic model allocation"],
-                                ["Vietnamese Language Support", "✅ 79.4% SQL accuracy", "Basic multilingual", "Basic multilingual", "❌ No language specialization", "Basic multilingual", "Superior Vietnamese enterprise support"]
+                                [
+                                    "Multi-Agent Coordination",
+                                    "✅ ReAct with MCP protocol",
+                                    "❌ Single-agent only",
+                                    "❌ Single-agent only",
+                                    "❌ No agent concept",
+                                    "❌ Single-model approach",
+                                    "Revolutionary multi-agent orchestration"
+                                ],
+                                [
+                                    "Parallel Task Execution",
+                                    "✅ Simultaneous multi-agent",
+                                    "❌ Sequential processing",
+                                    "❌ Sequential processing",
+                                    "❌ Sequential workflows",
+                                    "❌ Sequential processing",
+                                    "Superior efficiency through parallelization"
+                                ],
+                                [
+                                    "Adaptive Re-planning",
+                                    "✅ Dynamic optimization",
+                                    "❌ Static workflows",
+                                    "❌ Static flows",
+                                    "❌ Predefined workflows",
+                                    "❌ No re-planning",
+                                    "Intelligent workflow optimization"
+                                ],
+                                [
+                                    "Thinking-Action Loops",
+                                    "✅ Sophisticated reasoning cycles",
+                                    "❌ Simple request-response",
+                                    "❌ Basic dialogue flows",
+                                    "❌ Rule-based automation",
+                                    "❌ Direct execution",
+                                    "Advanced reasoning and optimization"
+                                ],
+                                [
+                                    "Specialized Agent Integration",
+                                    "✅ SQL/Doc/Web/Influencer",
+                                    "❌ Generic capabilities",
+                                    "❌ Generic capabilities",
+                                    "❌ No AI agents",
+                                    "❌ General purpose only",
+                                    "Domain-specialized intelligence"
+                                ],
+                                [
+                                    "Context Persistence",
+                                    "✅ Advanced memory management",
+                                    "Basic context handling",
+                                    "Basic context handling",
+                                    "❌ No context awareness",
+                                    "Basic context handling",
+                                    "Superior context retention"
+                                ],
+                                [
+                                    "LLM Strategy Optimization",
+                                    "✅ Gemini/Claude hybrid",
+                                    "Single model approach",
+                                    "Single model approach",
+                                    "❌ No LLM integration",
+                                    "Single model approach",
+                                    "Strategic model allocation"
+                                ],
+                                [
+                                    "Vietnamese Language Support",
+                                    "✅ 79.4% SQL accuracy",
+                                    "Basic multilingual",
+                                    "Basic multilingual",
+                                    "❌ No language specialization",
+                                    "Basic multilingual",
+                                    "Superior Vietnamese enterprise support"
+                                ]
                             ]
                         }
                     ]
