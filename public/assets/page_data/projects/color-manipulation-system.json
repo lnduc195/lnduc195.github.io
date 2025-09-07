@@ -1,7 +1,7 @@
 {
     "id": "color-manipulation-system",
     "author": ["Ngoc Duc"],
-    "highlight": true,
+    "highlight": false,
     "date": "2024-04-12",
     "title": "Real-time Intelligent Color Detection & Manipulation Platform",
     "description": "An advanced computer vision system for real-time color detection and manipulation using sophisticated RGB analysis, object segmentation, and selective color transformation while preserving lighting and texture realism.",
