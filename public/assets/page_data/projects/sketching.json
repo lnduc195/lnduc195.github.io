@@ -1,7 +1,7 @@
 {
     "id": "background-removal-segmentation",
     "author": ["Ngoc Duc"],
-    "highlight": true,
+    "highlight": false,
     "date": "2024-07-10",
     "title": "Real-time Human Segmentation & Background Manipulation System",
     "description": "A cutting-edge computer vision system for real-time human segmentation and background removal using deep learning, achieving broadcast-quality results with optimized performance for production video applications.",
