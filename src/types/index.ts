@@ -43,10 +43,18 @@ export interface AboutData {
 }
 
 export interface ProjectContent {
-  type: "text" | "image";
+  type: "text" | "image" | "table";
   text?: string;
   url?: string;
   caption?: string;
+  headers?: string[];
+  rows?: string[][];
+}
+
+export interface HierarchicalContent {
+  level?: string;
+  text?: string;
+  content?: (ProjectContent | HierarchicalContent)[];
 }
 
 export interface ProjectData {
@@ -60,13 +68,15 @@ export interface ProjectData {
     url: string;
     caption: string;
   };
-  problem_statement: ProjectContent[];
-  my_role: ProjectContent[];
-  technical_solution: ProjectContent[];
-  measurement_improvement: ProjectContent[];
-  implementation_integration: ProjectContent[];
-  real_world_impact: ProjectContent[];
-  company_alignment: ProjectContent[];
+  content?: HierarchicalContent[];
+  // Legacy support for old structure
+  problem_statement?: ProjectContent[];
+  my_role?: ProjectContent[];
+  technical_solution?: ProjectContent[];
+  measurement_improvement?: ProjectContent[];
+  implementation_integration?: ProjectContent[];
+  real_world_impact?: ProjectContent[];
+  company_alignment?: ProjectContent[];
   technologies: string[];
   topics: string[];
 }
