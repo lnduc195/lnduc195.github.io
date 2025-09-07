@@ -2,7 +2,8 @@
     "id": "topic-classification-system",
     "author": ["Ngoc Duc"],
     "highlight": false,
-    "date": "2024-09-22",
+    "start_date": "2024-09-01",
+    "end_date": "2024-09-22",
     "title": "Production-Scale Multi-Label Topic Classification Platform",
     "description": "A high-performance topic classification system capable of identifying multiple topics within documents with 92.9% micro mAP accuracy, featuring zero-shot capabilities and production-scale deployment for enterprise content management.",
     "main_image": {

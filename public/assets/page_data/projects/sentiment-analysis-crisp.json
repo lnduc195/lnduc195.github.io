@@ -2,7 +2,8 @@
     "id": "sentiment-analysis-crisp",
     "author": ["Ngoc Duc"],
     "highlight": false,
-    "date": "2024-08-15",
+    "start_date": "2024-07-20",
+    "end_date": "2024-08-15",
     "title": "Real-time Sentiment Analysis Engine for Customer Support",
     "description": "An advanced AI-powered real-time sentiment analysis system that transforms customer support conversations into actionable business intelligence through automated emotion detection, agent routing optimization, and comprehensive analytics dashboard.",
     "main_image": {

@@ -3,7 +3,8 @@
   "title": "MongoDB API",
   "description": "What approaches are available for executing SQL statements to manage data within MongoDB?",
   "author": "Duc Le",
-  "date": "2025-04-15",
+  "start_date": "2025-04-10",
+  "end_date": "2025-04-15",
   "content": [
     {
       "type": "text",

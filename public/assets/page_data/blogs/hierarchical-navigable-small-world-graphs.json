@@ -3,7 +3,8 @@
   "title": "Hierarchical Navigable Small World Graphs (HNSW)",
   "description": "Why does Google can fetch answers in milliseconds while your AI-powered chatbot takes minutes? Which can come from latency in retrieval process.",
   "author": "Duc Le",
-  "date": "2025-04-15",
+  "start_date": "2025-04-15",
+  "end_date": "2025-04-15",
   "content": [
     {
       "type": "text",

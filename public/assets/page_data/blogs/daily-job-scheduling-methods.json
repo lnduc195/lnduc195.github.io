@@ -3,7 +3,8 @@
   "title": "Run Code Daily at 9AM: Methods & Trade-offs",
   "description": "An exhaustive comparison of techniques to schedule code execution at 9AM daily using cron jobs, Python schedulers, Docker, and cloud-native services. Includes examples, use cases, pros and cons.",
   "author": "Duc Le",
-  "date": "2025-05-21",
+  "start_date": "2025-05-21",
+  "end_date": "2025-05-21",
   "content": [
     {
       "type": "text",

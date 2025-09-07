@@ -2,7 +2,8 @@
     "id": "production-ner-system",
     "author": ["Ngoc Duc"],
     "highlight": false,
-    "date": "2024-05-25",
+    "start_date": "2024-05-01",
+    "end_date": "2024-05-25",
     "title": "Production-Grade Named Entity Recognition for Customer Service",
     "description": "An advanced speech-to-text and NER pipeline extracting critical business entities from customer service calls, enabling automated ticket routing, product issue tracking, and comprehensive service intelligence analytics.",
     "main_image": {

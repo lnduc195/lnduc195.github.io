@@ -4,7 +4,8 @@
         "Ngoc Duc"
     ],
     "highlight": true,
-    "date": "2024-03-08",
+    "start_date": "2024-02-01",
+    "end_date": "2024-03-08",
     "title": "Enterprise Multi-Agent Chatbot Intelligence Platform",
     "description": "Advanced multi-agent chatbot platform featuring ReAct architecture with thinking-action loops, integrating SQL Agent, Doc Search, Web Search, and Influencer agents through MCP protocol - enabling autonomous task planning, parallel execution, and adaptive re-planning for comprehensive enterprise automation.",
     "main_image": {
