@@ -37,28 +37,28 @@ function getLevelStyles(level: string): { containerClass: string; headerClass: s
   
   // Determine hierarchy based purely on pattern (same pattern = same styling)
   if (isTopLevel) {
-    // Top level (A, B, C, etc.) - always the same styling
+    // Top level (A, B, C, etc.) - section headers with subtle emphasis
     return {
-      containerClass: "mb-16 border-l-4 border-blue-500 pl-6 bg-gradient-to-r from-blue-50 to-transparent py-4",
-      headerClass: "text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3"
+      containerClass: "mb-12 bg-white rounded-xl border border-gray-200 shadow-sm p-6 hover:shadow-md transition-shadow duration-200",
+      headerClass: "text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3 pb-3 border-b border-gray-100"
     };
   } else if (isRomanNumeral) {
-    // Roman numeral level (I, II, III, etc.) - always the same styling
+    // Roman numeral level (I, II, III, etc.) - equal weight cards
     return {
-      containerClass: "mb-12 border-l-2 border-blue-400 pl-6 ml-4 bg-gradient-to-r from-blue-50 to-transparent py-3",
-      headerClass: "text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-3"
+      containerClass: "mb-6 bg-gray-50 rounded-lg border border-gray-150 p-5 hover:bg-gray-75 transition-colors duration-200",
+      headerClass: "text-lg font-semibold text-gray-800 mb-4 flex items-center gap-3"
     };
   } else if (isNumeric) {
-    // Numeric level (1, 2, 3, etc.) - always the same styling
+    // Numeric level (1, 2, 3, etc.) - minimal cards
     return {
-      containerClass: "mb-10 border-l-2 border-blue-200 pl-6 ml-8 bg-gradient-to-r from-gray-50 to-transparent py-2",
-      headerClass: "text-xl font-medium text-gray-700 mb-4 flex items-center gap-3"
+      containerClass: "mb-4 bg-white rounded-md border border-gray-100 p-4 hover:border-gray-200 transition-colors duration-200",
+      headerClass: "text-base font-medium text-gray-700 mb-3 flex items-center gap-2"
     };
   } else {
-    // Unknown/other patterns - default styling
+    // Unknown/other patterns - minimal styling
     return {
-      containerClass: "mb-8 border-l border-gray-200 pl-4 ml-12 py-2",
-      headerClass: "text-lg font-medium text-gray-600 mb-3 flex items-center gap-2"
+      containerClass: "mb-4 p-3 rounded border-l-2 border-gray-200",
+      headerClass: "text-sm font-medium text-gray-600 mb-2 flex items-center gap-2"
     };
   }
 }
@@ -146,17 +146,17 @@ function HierarchicalContentRenderer({ item }: { item: HierarchicalContent }): J
     const isRomanNumeral = /^(I{1,3}V?X?|IV|V|VI|VII|VIII|IX|X)\./.test(cleanLevel);
     const isNumeric = /^\d+\./.test(cleanLevel);
     
-    if (isTopLevel) return "text-white bg-blue-600";
-    if (isRomanNumeral) return "text-blue-700 bg-blue-100";
-    if (isNumeric) return "text-gray-700 bg-gray-100";
-    return "text-gray-600 bg-gray-50";
+    if (isTopLevel) return "text-blue-700 bg-blue-50 border border-blue-200";
+    if (isRomanNumeral) return "text-gray-700 bg-gray-100 border border-gray-200";
+    if (isNumeric) return "text-gray-600 bg-gray-50 border border-gray-150";
+    return "text-gray-500 bg-gray-25 border border-gray-100";
   };
 
   return (
     <div className={containerClass}>
       {hasLevel && (
         <h3 className={headerClass}>
-          <span className={`font-mono text-sm px-3 py-1 rounded-lg font-semibold ${getBadgeColor(item.level!)}`}>
+          <span className={`font-mono text-xs px-2 py-1 rounded-md font-medium ${getBadgeColor(item.level!)}`}>
             {item.level}
           </span>
           <span className="text-current">{item.text}</span>
