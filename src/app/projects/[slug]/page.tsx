@@ -28,6 +28,19 @@ function processImageUrl(url: string): string {
   return url;
 }
 
+function formatDateRange(project: ProjectData): string {
+  // If we have both start_date and end_date
+  if (project.end_date) {
+    if (project.start_date === project.end_date) {
+      return project.start_date;
+    }
+    return `${project.start_date} - ${project.end_date}`;
+  }
+  
+  // If we have only start_date, show it as ongoing
+  return `${project.start_date} - Present`;
+}
+
 function getLevelStyles(level: string, depth: number): { containerClass: string; headerClass: string } {
   // Use depth to determine styling, ensuring same-depth elements get identical treatment
   switch (depth) {
@@ -212,7 +225,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       {/* Header */}
       <div className="mb-12">
         <div className="flex items-center gap-4 mb-4">
-          <span className="text-gray-500">{project.date}</span>
+          <span className="text-gray-500">{formatDateRange(project)}</span>
           {project.highlight && (
             <span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
               Featured

@@ -61,7 +61,8 @@ export interface ProjectData {
   id: string;
   author: string[];
   highlight: boolean;
-  date: string;
+  start_date: string;
+  end_date?: string; // Optional for ongoing projects
   title: string;
   description: string;
   main_image: {
@@ -86,7 +87,8 @@ export interface BlogData {
   title: string;
   description?: string;
   author: string;
-  date: string;
+  start_date: string;
+  end_date?: string; // Optional for ongoing publications
   content: ProjectContent[];
   topics: string[];
   technologies: string[];

@@ -2,11 +2,24 @@ import { getPublicationsData } from '@/lib/data';
 import Link from 'next/link';
 import { BlogData } from '@/types';
 
+function formatDateRange(blog: BlogData): string {
+  // If we have both start_date and end_date
+  if (blog.end_date) {
+    if (blog.start_date === blog.end_date) {
+      return blog.start_date;
+    }
+    return `${blog.start_date} - ${blog.end_date}`;
+  }
+  
+  // If we have only start_date, show it as ongoing
+  return `${blog.start_date} - Present`;
+}
+
 function PublicationCard({ blog }: { blog: BlogData }) {
   return (
     <article className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-6">
       <div className="flex items-center justify-between mb-3">
-        <span className="text-sm text-gray-500">{blog.date}</span>
+        <span className="text-sm text-gray-500">{formatDateRange(blog)}</span>
         <span className="text-sm text-blue-600">{blog.readingTime}</span>
       </div>
       

@@ -11,6 +11,19 @@ function processImageUrl(url: string): string {
   return url;
 }
 
+function formatDateRange(project: ProjectData): string {
+  // If we have both start_date and end_date
+  if (project.end_date) {
+    if (project.start_date === project.end_date) {
+      return project.start_date;
+    }
+    return `${project.start_date} - ${project.end_date}`;
+  }
+  
+  // If we have only start_date, show it as ongoing
+  return `${project.start_date} - Present`;
+}
+
 function ProjectCard({ project }: { project: ProjectData }) {
   return (
     <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
@@ -29,7 +42,7 @@ function ProjectCard({ project }: { project: ProjectData }) {
       
       <div className="p-6">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm text-gray-500">{project.date}</span>
+          <span className="text-sm text-gray-500">{formatDateRange(project)}</span>
           <div className="flex flex-wrap gap-1">
             {project.topics && project.topics.slice(0, 2).map((topic) => (
               <span key={topic} className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">
